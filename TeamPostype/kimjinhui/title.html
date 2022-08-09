@@ -5,7 +5,8 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-#title {
+.top-header {
+
 	font-size: 20px;
 	font-weight: 550;
 }
@@ -17,13 +18,13 @@ hr {
 	height: 1px;
 }
 
-#title span:nth-child(n+2) {
+.top-header span:nth-child(n+2) {
     position: relative;
     margin-left: 15px;
     padding-left: 15px;
 }
 
-#title span:nth-child(n+2)::after {
+.top-header span:nth-child(n+2)::after {
     position:absolute;
     left: 0;
     bottom: 7px;
@@ -33,44 +34,42 @@ hr {
     background-color: #E2E2E2;
 }
 
-#main {
-	font-size: 15px;
-	font-weight: bolder;
-	
-	
-	padding: 0px;
-	margin: 100px;
+.title {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     padding: 0 12px;
 }
 
-#main2 {
-	font-size: 30px;
-	font-weight: bold;
-	
-	padding: 0px;
-	margin: 100px;
-}
 
 </style>
 </head>
 <body>
 
-<div id="title">
+<div class="top-header">
+
     <span><a href="https://www.postype.com/feed"><img alt="이미지1" src="/resources/image/gray.png" width="30" height="30" title="포스타입 홈"></a></span>
+    
     <span><a href="https://blog.postype.com/" title="포스타입 공식 채널">포스타입 공식 채널</a></span>
+    
 </div>
 
 <br>
 <hr>
 
-<div id="main">
-<a href="https://posty.pe/swxlh2g">이벤트</a>
+<div class="title">
+
+	<h3><a href="https://posty.pe/swxlh2g">이벤트</a></h3>
+	
+	<div class="main2">
+	
+	<h1>천계영 작가 X 포스타입 특별 강연</h1>
+	
+	<h4>참가 신청 : 2022년 8월 15일까지 | 강연 일정: 8월 24일 오후 2시~ 6시</h4>
+	
+	</div>
+	
 </div>
 
-<div id="main2">
-<a>천계영 작가 X 포스타입 특별 강연</a>
-</div>
-
-
-<!-- main, main2 상하마진과 패딩 관련 알아보기 -->
 </body>
 </html>
