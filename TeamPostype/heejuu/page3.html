@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .sub-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left {
+            flex: 0 0 auto;
+            width: 24%;
+        }
+        
+        .center {
+            display: flex;
+            align-items: center;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 12px;
+        }
+
+        .navigation {
+            flex: 0 0 auto;
+            width: 24%;
+        }
+
+        .navigation li {
+            display: inline-block;
+        }
+
+		.page-control {
+		  height: 100%;
+		  align-items: center;
+		  justify-content: space-between;
+		}
+		
+		.page-control > div {
+		  max-width: 50%;
+		}
+		
+				.button {
+		  box-shadow:inset 0px 1px 0px 0px #ffffff;
+			background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+			background-color:#ffffff;
+			border-radius:16px;
+			border:3px solid #dcdcdc;
+			display:inline-block;
+			cursor:pointer;
+			color:#666666;
+			font-family:Arial;
+			font-size:18px;
+			font-weight:bold;
+			padding:6px 100px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #ffffff;
+		}
+		
+				.button:hover {
+		  background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+			background-color:#f6f6f6;
+		}
+		
+		.button:active {
+		  position:relative;
+			top:1px;
+		  }
+
+    </style>
+</head>
+<body>
+    <div class="sub-header">
+        <!-- 뒤로가기 -->
+        <div class="left">
+            ◀◀
+        </div>
+		<!-- 가운데에 올 것들 (이전글 제목 다음글) -->
+        <div class="center">
+        <!-- ◀  -->
+            <div>		
+		<a id="prev" class="button2" href="#">◀</a>		
+			</div>  <!-- ◀ 끝 -->
+			<!-- 카테고리와 제목 -->
+            <div class="title">
+                <h2>category</h2>
+                <h3>subject</h3>
+            </div>   <!-- 카테고리와 제목 끝 -->
+		<!--  ▶  -->
+		<div>		
+			<a id="next" class="button2" href="#">▶</a>		
+		</div>     <!--  ▶끝  -->    
+        </div>  <!-- center 끝 -->
+        
+        <div class="right navigation">
+            <ul>
+                <li>관심</li>
+                <li>책갈피</li>
+                <li>설정</li>
+                <li>  회차목록  </li>
+            </ul>
+        </div>
+    </div>
+
+
+		<!-- 이전글 / 다음글  -->
+	<div class="title">
+		<div>
+			
+			<a id="prev" class="button" href="/blog/githubpages/2020-12-26-making-blog-10/">&laquo; 이전글</a>
+			
+		</div>
+	
+		<div>
+			
+			<a id="next" class="button" href="/blog/githubpages/2020-12-26-making-blog-12/">다음글 &raquo;</a>
+			
+		</div>
+	</div>
+	<!-- 이전글 / 다음글 end -->
+		
+		   <section class="mb-5">
+	    <div class="title">
+	        <div class="card-body">
+	        
+	              <!-- 댓글 하나 -->
+	                <div class="userImage"><img class="rounded-circle" src="#" alt="..."></div>
+	                <div class="ms-3">
+	                    <div class="fw-bold">김희주</div>
+	                   존잼 넘 재밌고 존나 재밌고 진짜 최고예요 감동 그 잡채 
+	                </div>
+	                
+	         	  	<!-- 댓글 둘 -->
+		            <div class="d-flex">
+		                <div class="userImage"><img class="rounded-circle" src="#" alt="..."></div>
+		                <div class="ms-3">
+		                    <div class="fw-bold">김진희</div>
+		                   너무 재밌어서 결제 갈겼어요 작가님 사랑해요
+		                </div>
+		            </div>
+		            <!-- 댓글 셋 -->
+		           <div class="d-flex">
+		               <div class="userImage"><img class="rounded-circle" src="#" alt="..."></div>
+		               <div class="ms-3">
+		                   <div class="fw-bold">김희주</div>
+		                  WOOOOWWWWWWW 이거 책으로 내주세요 당장
+		               </div>
+		           </div>
+	            
+	            <!-- Comment form-->
+	            <form class="mb-4"><textarea class="form-control" rows="3" placeholder="댓글을 입력해봐 이것들아"></textarea></form>
+	           
+	        </div>
+	    </div>
+	</section>
+	    
+</body>
+</html>
+
+</html>
