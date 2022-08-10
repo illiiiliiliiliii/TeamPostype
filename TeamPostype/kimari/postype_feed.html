@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0 auto;
+}
+
+/* HEAD_STYLE */
+
+.header {
+	width: 1905px;
+	height: 60px;
+	align-items: center;
+	box-shadow: 0 1px rgba(0,0,0,.05);
+}
+
+.category {
+	display: flex;
+	align-items: center;
+}
+
+.logo-box {
+	width: 1052px;
+	height: 60px;
+	line-height: 60px;
+	font-family: Arial;
+	font-weight: 600;
+	font-size: 23px;
+	margin-left: 220px;
+}
+
+.logo-box > a {
+	text-decoration-line: none;
+	color: black;
+}
+
+.category-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	background: #ffffff;
+	width: 1010px;
+	height: 340px;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+.category-list > div {
+	display: inline-block;
+	border: 1px solid #ccc;
+	width: 242.5px;
+	height: 160px;
+	background-image: url("/resources/image/gray.png");	
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	padding: 25px;
+	margin: 5px;
+}
+
+.title {
+	font-family: Malgun Gothic;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 23px;
+}
+
+.description {
+	font-family: Malgun Gothic;
+	font-weight: 400;
+	font-size: 14px;
+	margin-top: 0.3em;
+	line-height: 135%
+}
+
+
+/* BODY_STYLE */
+
+.component-post-divider  {
+	width: 640px;
+    height: 1px;
+    background: rgba(0,0,0,.05);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.home-body {
+	display: block;
+}
+
+.home-body-inner {
+	width: 640px;
+	height: 42px;
+	border-radius: 8px;
+	border: 1px solid rgba(0,0,0,.1);
+	display: flex;
+	align-items: center;
+}
+
+.body-menu {
+	width: 181px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-right: 1px solid rgba(0,0,0,.1);
+}
+
+.body-menu:last-child {
+	border-right: none;
+}
+
+.home-body-inner > a {
+	text-decoration-line: none;
+	color: #000;
+	font-size: 15px;
+}
+
+.home-body-inner > a:hover {
+  color : #007bff;
+}
+
+.section {
+	width: 640px;
+	border-bottom: 1px solid rgba(0,0,0,.1); 
+}
+
+.section-head {
+	width: 600px;
+	height: 99px;
+	align-items: center;
+	line-height: 21px;
+	color: rgba(0, 0, 0, 0.47);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: .5rem;
+	line-height: 1.2;
+}
+
+.h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.section-head > h5 {
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.icon-wrapper {
+	display: inline-flex;
+	margin: 10px;
+}
+
+.feed-main {
+	padding: 24px 12px; 
+}
+
+.post-list {
+
+    width: 100%;
+    width: 640px;
+    height: 183.49px;
+}
+
+.post-list > div > a {
+    text-decoration-line: none;
+}
+
+.post-data-1 {
+    height: 25.9px;
+}
+
+.post-data-2 {
+	float: left;
+	margin-bottom: 27px;
+}
+
+.post-data-3 {
+	float: right;
+}
+
+.post-data-4 {
+    align-items: center;
+	margin-top: 15px;
+}
+
+.series {
+	color: rgba(0,0,0,.54)!important;
+	margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    height: 25.9px;
+    line-height: 18.9px;
+    margin-bottom: 6px;
+    text-size-adjust: 100%;
+}
+
+.post-title {
+	color: #000!important;
+	margin-bottom: 7px;
+    font-size: 20px;
+    line-height: 27px;
+    width: 472px;
+    height: 27px;
+    font-weight: 600;
+}
+
+.post-info {
+	color: rgba(0,0,0,.47)!important;
+	display: inline;
+	margin-bottom: 7px;
+    font-size: 15px;
+    line-height: 32.3px;
+    width: 472px;
+    height: 20.8px;
+    font-weight: 400;
+}
+
+.post-tags > a, a:hover {
+    text-decoration-line: none;
+        color: #3478FF;   
+}
+
+.post-tags {
+    display: inline-block;
+	font-size: 13px;
+    line-height: 16px;
+	background: #EBF4FF;
+    padding: 2px 6px;
+    border-radius: 3px;
+    
+}
+
+.post-image {
+    margin-left: 24px;
+    width: 144px;
+    height: 108px; 
+    float: right;
+}
+
+#image {
+	width: 144px;
+    height: 108px;
+    border-radius: 8px;
+}
+
+.profile {
+	float: left;
+}
+
+#profile-image {
+	border-radius: 50%;
+	width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.user {
+	width: 506px;
+    height: 15px;
+   	font-size: 13px;
+   		margin-top: 15px;
+}
+
+.user > a {
+    text-decoration-line: none;
+    color: #000;  
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+	<div class="category"> 
+		<div class="logo-box">
+			<a href="http://www.postype.coom">
+				<span id="logo">POSTYPE</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<!-- HOME_HEAD -->
+
+<div class="home-head">
+	<div class="category-list">
+		<div id="webtoon" style="cursor: pointer;" onclick="location.href='https://www.google.co.kr/';">
+			<div class="title">웹툰</div>
+				<div class="description">
+					<span>
+						BL, GL, 로맨스,
+						<br>
+					</span>
+					<span>드라마, 판타지</span>
+				</div>
+		</div>
+		<div id="webnovel" style="cursor: pointer;" onclick="location.href='https://www.google.co.kr/';">
+			<div class="title">웹소설</div>
+				<div class="description">
+					<span>
+						BL, GL, 로맨스,
+						<br>
+					</span>
+					<span>고전, 판타지</span>
+				</div>
+		</div>
+		<div id="knowledge-essay" style="cursor: pointer;" onclick="location.href='https://www.google.co.kr/';">
+			<div class="title">지식·에세이</div>
+				<div class="description">
+					<span>
+						지식, 문화,
+						<br>
+					</span>
+					<span>에세이, 시</span>
+				</div>
+		</div>
+		<div id="resource" style="cursor: pointer;" onclick="location.href='https://www.google.co.kr/';">
+			<div class="title">창작소재</div>
+				<div class="description">
+					<span>
+						클립스튜디오,
+						<br>
+					</span>
+					<span>굿노트, 스케치업</span>
+				</div>
+		</div>
+			<div id="visual-art" style="cursor: pointer;" onclick="location.href='https://www.google.co.kr/';">
+			<div class="title">시각예술</div>
+				<div class="description">
+					<span>
+						일러스트, 사진,
+						<br>
+					</span>
+					<span>동영상</span>
+				</div>
+		</div>
+		<div id="class" style="cursor: pointer;" onclick="location.href='https://www.google.co.kr/';">
+			<div class="title">클래스</div>
+				<div class="description">
+					<span>
+						글쓰기, 드로잉,
+						<br>
+					</span>
+					<span>공예, 디자인</span>
+				</div>
+		</div>
+		<div id="fanwork" style="cursor: pointer;" onclick="location.href='https://www.google.co.kr/';">
+			<div class="title">팬창작</div>
+		</div>
+		<div id="original" style="cursor: pointer;" onclick="location.href='https://www.google.co.kr/';">
+			<div class="title">오리지널</div>
+				<div class="description">
+					<span>
+					웹툰, 웹소설
+						<br>
+					</span>
+					<span>독점 연재작</span>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- HOME_BODY -->
+
+<div class="home-body"></div>
+	<div class="home-body-inner">
+		<a class="body-menu" href="https://www.google.co.kr/">컬렉션</a>
+		<a class="body-menu" href="https://www.google.co.kr/">파트너스</a>	
+		<a class="body-menu" href="https://www.google.co.kr/">이벤트</a>	
+	</div>
+	
+	<div class="section">
+		<div class="section-head">
+			<h4>아직 구독한 채널이 없어요.</h4>
+			<h5>포스타입 추천 작품을 둘러보고 마음에 드는 채널을 구독해보세요.</h5>
+			<div class="icon-wrapper">
+				<img alt="icon" src="https://d33pksfia2a94m.cloudfront.net/assets/img/icon/angle-down-gray.svg">
+			</div>
+		</div>
+	</div>
+
+	<div class="feed-main">
+		<div class="post-list">
+			<div class="post-data-1">
+				<a class="series" href="https://www.google.co.kr/">이벤트</a>
+			</div>
+			<div class="post-data-2">
+				<a class="post-title" href="https://www.google.co.kr/">천계영 작가 x 포스타입 특별 강연</a><br>
+				<a class="post-info" href="https://www.google.co.kr/">'좋아하면 울리는'기획에서 IP사업까지, 천계영 작가님께  직접 듣고 질문해보세요.</a><br>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">프로모션</a>
+				</div>
+			</div>
+			<div class="post-data-3">
+				<div class="post-image">
+					<a href="https://www.google.co.kr/">
+						<img id="image" alt="post-image" src="/resources/image/gray.png">
+					</a>
+				</div>
+			</div>
+			<div class="post-data-4">
+				<div class="profile">
+				<a href="https://www.google.co.kr/">
+					<img id="profile-image" alt="profile-image" src="/resources/image/gray.png">
+				</a>
+				</div>
+				<div class="profile">
+					<div class="user">
+						<a href="https://www.google.co.kr/">포스타입</a>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	<div class="component-post-divider"></div>	
+		
+		
+		
+			
+	</div>
+		
+		
+		
+
+		
+		
+	</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>
