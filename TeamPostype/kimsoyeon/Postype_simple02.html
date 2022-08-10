@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 상단바 만들기 -->
+	<div class="upper_bar"; style="border: 1px solid black; padding:10px">
+		<a href="#"><img src="C:/Users/user/Desktop/2조/회색 이미지.png"">뒤로</a>
+		<a href="#"><img src="">서식</a>
+		<a href="#">삽입</a>
+		<a href="#">실행취소</a>
+		<a href="#">재실행</a>
+		<a href="#">맞춤법 검사</a>
+		<a href="#">저장</a>
+		<a href="#">발행</a>
+		<a href="#">더보기</a>
+	</div>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- JS의 영역 -->
+<script type="text/javascript"></script>
+
+<!-- CSS의 영역 -->
+<style type="text/css">
+
+#upper-bar{
+	padding-right: 18px;
+	padding-left: 18px;
+}
+
+ul.nav {
+   list-style-type: none;
+   
+   padding: 0;
+   margin: 0;
+}
+
+ul.nav > li {
+   float: left;
+   background : none;
+   line-height: 10px;
+}
+
+ul.nav > li > ul > li {
+   background : none;
+   padding-left: 10px;
+   
+   /* 평소에 보이지 않도록 설정 */
+   height: 0;
+   font-size: 5px;
+   line-height: 20px;
+}
+
+ul.nav > li > ul > li > a {
+   background: #ccc;
+   color: black;
+   text-decoration: none;
+   display: block;
+}
+
+#hr{
+   width : 870px;
+}
+
+#title {
+   width : 500px;
+   height : 70px;
+   padding : 3px 10px;
+   font-size : 35px;
+   font-weight : bold;
+   margin-left: 400px;
+}
+
+#sub_title {
+   width : 500px;
+   height: 30px;
+   padding : 3px 3px;
+   font-size : 15px;
+   margin-left : 410px;
+}
+
+#content {
+   line-height : 30px;   
+   width : 500px;
+   margin-left : 411px;
+}
+
+#fieldset {
+   margin:100px auto;
+   border : 1px solid gray;
+ 
+}
+
+
+</style>
+
+
+</head>
+<body>
+	
+	<br>
+	<br>
+	<br>
+	
+	
+	<!-- 제목 / 부제목 -->
+	<div>
+		<h1><input type="text" id="title" name="title" placeholder="제목을 입력하세요." style="border:none;"></h1>
+		<h3><input type="text" id="sub_title" name="sub_title" placeholder="부제목을 입력하세요." style="border:none;"></h3>
+	</div>
+	<hr>
+	
+	<!-- 내용 입력란 -->
+	<div>
+		<h3><input type="text" id="content" name="content" placeholder="내용을 입력하세요." style="border:none;"></h3>
+	</div>
+	
+	<br>
+	
+	<!-- 결제 / 후원 상자 -->
+	<div>
+	<fieldset style="width : 800px; height: 100px;">
+		<h4>결제 상자 - 후원 모드</h4>
+		<h6>결제상자를 위로 드래그해 판매 모드로 바꿀 수 있습니다.</h6>
+	</fieldset>
+	</div>
+
+
+</body>
+</html>
