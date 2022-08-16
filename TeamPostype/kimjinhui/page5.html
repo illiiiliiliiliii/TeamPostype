@@ -5,57 +5,86 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-#category-menu,
-#sub-menu {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-#category-menu > li {
-	float: left;
-	border: 1px solid gray;
+body {
+    padding: 10px;
 }
-#category-menu > li> a {
-	display: block;
-	padding: 20px 16px;
-	text-align: center;
+
+a {
+    text-decoration: none;
+    color: #000;
 }
+
+li {
+    padding: 3px;
+    list-style-type: none;
+}
+
+input {
+    position: fixed;
+    left: -9999px;
+}
+
+label {
+	font-size: 14px;
+    cursor: pointer;
+    color: black;
+}
+
+.sub-menu {
+    display:none;
+    font-size: 12px;
+    font-weight: nomal;
+}
+
+#category-menu:checked ~ .sub-menu {
+    display: block;
+}
+
+
 
 
 </style>
+
+
 </head>
 <body>
 
 </body>
 
-<div class="top-header">
+<div class="top-header"> <!-- 맨 위 상단바 -->
 	<span><a href="#"><img alt="이미지1" src="/TeamPostype/kimjinhui/img/gray.png" 
 							width="110" height="40"></a></span>
-	<div id="main-menu">
-		<ul id="category-menu">
-			<li><a href="#">카테고리</a>
-				<ul id="sbu-manu">
-					<li>웹툰</li>
-					<li>웹소설</li>
-					<li>지식·에세이</li>
-					<li>창작소재</li>
-					<li>시각예술</li>
-					<li>클래스</li>
-					<li>팬창작</li>
-					<li>포스타입 오리지널</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
 
-
-
-
+    <ul>
+        <li>
+            <input type="checkbox" id="category-menu">
+            <label for="category-menu" class="labelBtn" onclick="">카테고리</label>
+            <ul class="sub-menu">
+                <li><a href="#">웹툰</a></li>
+                <li><a href="#">웹소설</a></li>
+                <li><a href="#">지식·에세이</a></li>
+                <li><a href="#">창작소재</a></li>
+                <li><a href="#">시각예술</a></li>
+                <li><a href="#">클래스</a></li>
+                <li><a href="#">팬창작</a></li>
+                <li><a href="#">포스타입 오리지널</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>
 
 <br>
 <hr>
 <br>
+
+<a href="#">웹소설</a>
+<a href="#">홈</a>
+<a href="#">랭킹</a>
+<a href="#">최신</a>
 
 </html>
