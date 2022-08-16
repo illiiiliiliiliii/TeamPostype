@@ -5,50 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
+ <style>
+		button {
+          background-color: #F9B514;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        .modal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .modal .bg {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modalBox {
+          position: absolute;
+          background-color: #fff;
+          width: 400px;
+          height: 200px;
+          padding: 15px;
+        }
+
+        .modalBox button {
+          display: block;
+          width: 80px;
+          margin: 0 auto;
+        }
+
+        .hidden {
+          display: none;
+        }
+   </style>
+    
 </head>
+
+
+
 <body>
 
+<button class="openBtn">모달창 open</button>
+<div class="modal hidden">
+  <div class="bg"></div>
+  <div class="modalBox">
+    <p>내용</p>
+    <button class="closeBtn">✖</button>
+  </div>
+</div>
 
+<script>
+  const open = () => {
+    document.querySelector(".modal").classList.remove("hidden");
+  }
 
-브랜치 환경 테스트
+  const close = () => {
+    document.querySelector(".modal").classList.add("hidden");
+  }
 
+  document.querySelector(".openBtn").addEventListener("click", open);
+  document.querySelector(".closeBtn").addEventListener("click", close);
+  document.querySelector(".bg").addEventListener("click", close);
 
-
-
-
-   <section class="mb-5">
-    <div class="card bg-light">
-        <div class="card-body">
-        
-              <!-- 댓글 하나 -->
-                <div class="userImage"><img class="rounded-circle" src="#" alt="..."></div>
-                <div class="ms-3">
-                    <div class="fw-bold">김희주</div>
-                   존잼 넘 재밌고 존나 재밌고 진짜 최고예요 감동 그 잡채 
-                </div>
-                
-         	  	<!-- 댓글 둘 -->
-	            <div class="d-flex">
-	                <div class="userImage"><img class="rounded-circle" src="#" alt="..."></div>
-	                <div class="ms-3">
-	                    <div class="fw-bold">김진희</div>
-	                   너무 재밌어서 결제 갈겼어요 작가님 사랑해요
-	                </div>
-	            </div>
-	            <!-- 댓글 셋 -->
-	           <div class="d-flex">
-	               <div class="userImage"><img class="rounded-circle" src="#" alt="..."></div>
-	               <div class="ms-3">
-	                   <div class="fw-bold">김희주</div>
-	                  WOOOOWWWWWWW 이거 책으로 내주세요 당장
-	               </div>
-	           </div>
-            
-            <!-- Comment form-->
-            <form class="mb-4"><textarea class="form-control" rows="3" placeholder="댓글을 입력해봐 이것들아"></textarea></form>
-           
-        </div>
-    </div>
-</section>
+</script>
+    
 </body>
 </html>
