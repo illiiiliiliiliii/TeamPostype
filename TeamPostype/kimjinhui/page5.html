@@ -45,6 +45,18 @@ label {
     display: block;
 }
 
+.category-header_webnovel {
+	background-color: #bfbfbf;
+	background-size: 200px 200px;
+	height: 150px;
+}
+
+
+.title{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
 
 
 
@@ -64,7 +76,7 @@ label {
         <li>
             <input type="checkbox" id="category-menu">
             <label for="category-menu" class="labelBtn" onclick="">카테고리</label>
-            <ul class="sub-menu">
+            <ul class="sub-menu">	<!-- 카테고리 메뉴 -->
                 <li><a href="#">웹툰</a></li>
                 <li><a href="#">웹소설</a></li>
                 <li><a href="#">지식·에세이</a></li>
@@ -82,9 +94,43 @@ label {
 <hr>
 <br>
 
-<a href="#">웹소설</a>
-<a href="#">홈</a>
-<a href="#">랭킹</a>
-<a href="#">최신</a>
+<!-- 웹소설 페이지의 외부 메뉴 <수정 필요함~!> -->
+<div id="menu">
+	<ul class="out-menu">
+		<li><a href="#">웹소설</a></li>
+		<li><a href="#">홈</a></li>
+		<li><a href="#">랭킹</a></li>
+		<li><a href="#">최신</a></li>
+	</ul>
+</div>
+
+<!-- 배경라인 -->
+<div class="category-header_webnovel">
+	<div class="title">웹소설</div>
+</div>
+
+<!-- 웹소설 페이지의 내부 메뉴, 외부 메뉴와 동작이 같다 <수정 필요함~!> -->
+<div id="menu">
+	<ul class="in-menu">
+		<li><a href="#">전체</a></li>
+		<li><a href="#">BL</a></li>
+		<li><a href="#">GL</a></li>
+		<li><a href="#">로맨스</a></li>
+		<li><a href="#">고전</a></li>
+		<li><a href="#">판타지</a></li>
+		<li><a href="#">학원</a></li>
+		<li><a href="#">일상</a></li>
+		<li><a href="#">호러</a></li>
+	</ul>
+</div>
+
+<br>
+<hr>
+<br>
+
+
+
+
+
 
 </html>
