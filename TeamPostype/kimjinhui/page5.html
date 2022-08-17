@@ -14,50 +14,96 @@ body {
     padding: 10px;
 }
 
+/* 카테고리 클릭시 나오는 메뉴의 밑줄 삭제 */
 a {
     text-decoration: none;
     color: #000;
 }
 
-li {
-    padding: 3px;
-    list-style-type: none;
-}
-
+/* 카테고리 체크박스 제거 */
 input {
     position: fixed;
     left: -9999px;
 }
 
+/* 카테고리 클릭시 반응, 글씨의 크기, 색  */
 label {
 	font-size: 14px;
     cursor: pointer;
     color: black;
 }
 
+/* 카테고리 클릭시 나오는 메뉴 */
 .sub-menu {
     display:none;
+    padding: 3px;
     font-size: 12px;
     font-weight: nomal;
+    list-style-type: none;
 }
 
+/* 카테고리 클릭시 메뉴 세로 정렬 */
 #category-menu:checked ~ .sub-menu {
     display: block;
 }
 
+/* 웹소설 페이지의 외부 메뉴의 가운데 정렬과 ·제거 */
+.out-menu {
+	text-align: center;
+	list-style-type: none;
+}
+
+/* 웹소설 페이지의 외부 메뉴의 영역 */
+.out-menu1, .out-menu2, .out-menu3 {
+	display: inline-block;
+}
+
+/* 배경 사이즈, 색 */
 .category-header_webnovel {
 	background-color: #bfbfbf;
-	background-size: 200px 200px;
+	background-size: 250px 200px;
 	height: 150px;
 }
 
-
+/* 배경 */
 .title{
 	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
 }
 
+/* 웹소설 페이지의 내부 메뉴의 가운데 정렬과 ·제거 */
+.in-menu {
+	text-align: center;
+	list-style-type: none; 
+}
+
+/* 웹소설 페이지의 내부 메뉴의 영역 */
+.in-menu1, .in-menu2, .in-menu3, .in-menu4, .in-menu5,
+.in-menu6, .in-menu7, .in-menu8, .in-menu9 {
+	display: inline-block;
+}
+
+/* 랭킹 집계 수평 정렬 */
+.ranking-time{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content : space-between;
+}
+
+/* 랭킹 글씨 크기 */
+.ranking {
+	font-size: 15px;
+}
+/* 랭킹 글씨 색 */
+.beta {
+	color: #00BFFF
+}
+
+/* 랭킹 시간 글씨 색 */
+.time {
+	font-size: 12px;
+}
 
 
 </style>
@@ -74,9 +120,9 @@ label {
 
     <ul>
         <li>
-            <input type="checkbox" id="category-menu">
+            <input type="checkbox" id="category-menu">	<!-- 카테고리 메뉴 -->
             <label for="category-menu" class="labelBtn" onclick="">카테고리</label>
-            <ul class="sub-menu">	<!-- 카테고리 메뉴 -->
+            <ul class="sub-menu">	
                 <li><a href="#">웹툰</a></li>
                 <li><a href="#">웹소설</a></li>
                 <li><a href="#">지식·에세이</a></li>
@@ -94,39 +140,69 @@ label {
 <hr>
 <br>
 
-<!-- 웹소설 페이지의 외부 메뉴 <수정 필요함~!> -->
+<!-- 웹소설 페이지의 외부 메뉴 -->
+<a>웹소설</a>
 <div id="menu">
 	<ul class="out-menu">
-		<li><a href="#">웹소설</a></li>
-		<li><a href="#">홈</a></li>
-		<li><a href="#">랭킹</a></li>
-		<li><a href="#">최신</a></li>
+		<li class="out-menu1"><a href="#">홈</a></li>
+		<li class="out-menu2"><a href="#">랭킹</a></li>
+		<li class="out-menu3"><a href="#">최신</a></li>
 	</ul>
 </div>
+
+<br>
 
 <!-- 배경라인 -->
 <div class="category-header_webnovel">
 	<div class="title">웹소설</div>
 </div>
 
-<!-- 웹소설 페이지의 내부 메뉴, 외부 메뉴와 동작이 같다 <수정 필요함~!> -->
+<br>
+
+<!-- 웹소설 페이지의 내부 메뉴 - >외부 메뉴와 동작이 같다 -->
 <div id="menu">
 	<ul class="in-menu">
-		<li><a href="#">전체</a></li>
-		<li><a href="#">BL</a></li>
-		<li><a href="#">GL</a></li>
-		<li><a href="#">로맨스</a></li>
-		<li><a href="#">고전</a></li>
-		<li><a href="#">판타지</a></li>
-		<li><a href="#">학원</a></li>
-		<li><a href="#">일상</a></li>
-		<li><a href="#">호러</a></li>
+		<li class="in-menu1"><a href="#">전체</a></li>
+		<li class="in-menu2"><a href="#">BL</a></li>
+		<li class="in-menu3"><a href="#">GL</a></li>
+		<li class="in-menu4"><a href="#">로맨스</a></li>
+		<li class="in-menu5"><a href="#">고전</a></li>
+		<li class="in-menu6"><a href="#">판타지</a></li>
+		<li class="in-menu7"><a href="#">학원</a></li>
+		<li class="in-menu8"><a href="#">일상</a></li>
+		<li class="in-menu9"><a href="#">호러</a></li>
 	</ul>
 </div>
 
 <br>
 <hr>
 <br>
+
+<!-- 랭킹 집계 시간 -->
+<div class="ranking-time">
+	<h2 class="ranking">랭킹 <small class="beta">beta</small></h2>
+	<div class="time">
+		<time>2022.08.17. 15:00</time>
+	</div>
+</div>
+
+
+
+<!-- 내부 내용  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
