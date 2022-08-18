@@ -15,6 +15,13 @@ body {
     padding: 10px;
 }
 
+/* postype로고 글씨 크기 */
+.postype {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+
 /* 카테고리 클릭시 나오는 메뉴의 밑줄 삭제 */
 a {
     text-decoration: none;
@@ -48,7 +55,7 @@ label {
     display: block;
 }
 
-/* 웹소설 페이지의 외부 메뉴의 가운데 정렬과 ·제거 */
+/* 웹소설 페이지의 외부 메뉴의 가운데 정렬과·제거 */
 .out-menu {
 	text-align: center;
 	list-style-type: none;
@@ -170,12 +177,10 @@ label {
 <header>
 
 <div class="top-header"> <!-- 맨 위 상단바 -->
-	<span><a href="#"><img alt="이미지1" src="/TeamPostype/kimjinhui/img/gray.png" 
-							width="110" height="40"></a></span>
-
+	<span class="postype"><a href="#">POSTYPE</a></span>
     <ul>
-        <li>
-            <input type="checkbox" id="category-menu">	<!-- 카테고리 메뉴 -->
+        <li> <!-- 카테고리 메뉴 -->
+            <input type="checkbox" id="category-menu">	
             <label for="category-menu" class="labelBtn" onclick="">카테고리</label>
             <ul class="sub-menu">	
                 <li><a href="#">웹툰</a></li>
@@ -189,60 +194,58 @@ label {
             </ul>
         </li>
     </ul>
-</div>
-
-<br>
-<hr>
-<br>
-
-<!-- 웹소설 페이지의 외부 메뉴 -->
-<a>웹소설</a>
-<div id="menu">
-	<ul class="out-menu">
-		<li class="out-menu1"><a href="#">홈</a></li>
-		<li class="out-menu2"><a href="#">랭킹</a></li>
-		<li class="out-menu3"><a href="#">최신</a></li>
-	</ul>
-</div>
-
-<br>
-
-<!-- 배경라인 -->
-<div class="category-header_webnovel">
-	<div class="title">웹소설</div>
-</div>
-
-<br>
-
-<!-- 웹소설 페이지의 내부 메뉴 - >외부 메뉴와 동작이 같다 -->
-<div id="menu">
-	<ul class="in-menu">
-		<li class="in-menu1"><a href="#">전체</a></li>
-		<li class="in-menu2"><a href="#">BL</a></li>
-		<li class="in-menu3"><a href="#">GL</a></li>
-		<li class="in-menu4"><a href="#">로맨스</a></li>
-		<li class="in-menu5"><a href="#">고전</a></li>
-		<li class="in-menu6"><a href="#">판타지</a></li>
-		<li class="in-menu7"><a href="#">학원</a></li>
-		<li class="in-menu8"><a href="#">일상</a></li>
-		<li class="in-menu9"><a href="#">호러</a></li>
-	</ul>
-</div>
-
-<br>
-<hr>
-<br>
-
-<!-- 랭킹 집계 시간 -->
-<div class="ranking-time">
-	<h2 class="ranking">랭킹 <small class="beta">beta</small></h2>
-	<div class="time">
-		<time>2022.08.17. 15:00</time>
+    
+	<hr>
+    
+	<!-- 웹소설 페이지의 외부 메뉴 -->
+	<a>웹소설</a>
+	<div id="menu">
+		<ul class="out-menu">
+			<li class="out-menu1"><a href="#">홈</a></li>
+			<li class="out-menu2"><a href="#">랭킹</a></li>
+			<li class="out-menu3"><a href="#">최신</a></li>
+		</ul>
 	</div>
+	
+	<br>
+	
+	<!-- 배경라인 -->
+	<div class="category-header_webnovel">
+		<div class="title">웹소설</div>
+	</div>
+	
+	<br>
+	
+	<!-- 웹소설 페이지의 내부 메뉴 - >외부 메뉴와 동작이 같다 -->
+	<div id="menu">
+		<ul class="in-menu">
+			<li class="in-menu1"><a href="#">전체</a></li>
+			<li class="in-menu2"><a href="#">BL</a></li>
+			<li class="in-menu3"><a href="#">GL</a></li>
+			<li class="in-menu4"><a href="#">로맨스</a></li>
+			<li class="in-menu5"><a href="#">고전</a></li>
+			<li class="in-menu6"><a href="#">판타지</a></li>
+			<li class="in-menu7"><a href="#">학원</a></li>
+			<li class="in-menu8"><a href="#">일상</a></li>
+			<li class="in-menu9"><a href="#">호러</a></li>
+		</ul>
+	</div>
+	
+	<br>
+	<hr>
+	<br>
+	
+	<!-- 랭킹 집계 시간 -->
+	<div class="ranking-time">
+		<h2 class="ranking">랭킹 <small class="beta">beta</small></h2>
+		<div class="time">
+			<time>2022.08.17. 15:00</time>
+		</div>
+	</div>
+
 </div>
 
 </header>
-
 
 
 <main>	<!-- 메인 -->
