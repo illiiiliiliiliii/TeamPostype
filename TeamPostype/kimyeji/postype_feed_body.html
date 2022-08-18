@@ -13,6 +13,16 @@
 }
 
 
+.no-more-feed {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16.8px;
+	color: rgba(0,0,0,.47);
+	padding: 30px 20px;
+	text-align: center;
+}
+
+
 /* HEADER_STYLE */
 
 
@@ -279,6 +289,24 @@ p {
 }
 
 
+.no-more-feed {
+	width: 540px;
+	padding-bottom: 100px;
+}
+
+.btn {
+	background-color: #fff;
+	border-radius: 4px;
+	border-width: 1px;
+	width: 125px;
+	height: 32px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	color: #3478FF;  
+	border-color: #3478FF; 
+}
 
 
 /* FOOTER_STYLE */
@@ -573,9 +601,18 @@ p {
 		<div class="component-post-divider"></div>
 		
 	</div>
-
 	
-	<div class="feed-bottom"></div>
+	<div class="feed-bottom">
+		<div class="no-more-feed">
+			<p style="margin-bottom: 0px;">추천 작품을 모두 둘러봤습니다.</p>
+			<p>포스타입의 다른 작품들을 더 살펴볼까요?</p>
+			<a class="btn-href" href="https://www.postype.com/collections">
+				<button type="button" class="btn">
+					<span class="text">컬렉션 둘러보기</span>
+				</button>
+			</a>	
+		</div>
+	</div>
 	
 	
 <!--FOOTER -->
