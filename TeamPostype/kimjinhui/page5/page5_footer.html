@@ -5,18 +5,34 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-
-
-.footer-menu {
-	text-align: center;
-	list-style-type: none;
+.footer {
+	text-align: center; 
+	padding: 30px 30px;
 	font-size: 12px;
+} 
+
+.footer li {
+	position: relative; 
+	display: inline; 			/* table-cell; */
+	padding: 0 3px 0 6px; 
+	white-space: nowrap;
 }
 
-.fmenu1, .fmenu2, .fmenu3, .fmenu4, .fmenu5, .fmenu6, 
-.fmenu7, .fmenu8, .fmenu9, .fmenu10, .fmenu11 {
-	display: inline-block;
-	padding: 5px;
+.footer li:before {
+	content: '';
+	width: 1px; height: 12px;
+	background-color: #dbdbdb;
+	position: absolute;
+	left: 0;
+	top: 2px;
+}
+
+.footer li:first-child:before {
+	width: 0;
+}
+
+.footer address {
+	padding-top: 15px;
 }
 
 
@@ -25,33 +41,29 @@
 </head>
 <body>
 
-<footer>	<!-- 하단 -->
-
-<div id="postype-footer">
-	<ul class="footer-menu">
-		<li class="fmenu1"><a href="#">서비스 소개</a></li>
-		<li class="fmenu2"><a href="#">이용약관</a></li>
-		<li class="fmenu3"><a href="#">개인정보처리방침</a></li>
-		<li class="fmenu4"><a href="#">채용</a></li>
-		<li class="fmenu5"><a href="#">도움 센터</a></li>
-		<li class="fmenu6"><a href="#">권리침해신고센터</a></li>
-		<li class="fmenu7"><a href="#">포스타입 파트너스</a></li>
-		<li class="fmenu8"><a href="#">공식채널</a></li>
-		<li class="fmenu9"><a href="#">회사소개 · 문의</a></li>
-		<li class="fmenu10"><a href="#">브랜드 리소스</a></li>
-		<li class="fmenu11"><a href="#">&copy; POSTYPE, INC.</a></li>
-	</ul>
-<address>
-
-</address>
-
-
-</div>
-
-
-
-
-</footer>
+<!-- 하단 -->
+<footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer">
+                    <ul>
+                        <li><a href="#">서비스 소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="#">채용</a></li>
+                        <li><a href="#">도움 센터</a></li>
+                        <li><a href="#">권리침해신고센터</a></li>
+                        <li><a href="#">포스타입 파트너스</a></li>
+                        <li><a href="#">공식 채널</a></li>
+                        <li><a href="#">회사 소개</a></li>
+                        <li><a href="#">문의</a></li>
+                        <li><a href="#">브랜드 리소스</a></li>
+                        <li>&copy; POSTYPE, INC.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
