@@ -5,35 +5,51 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-.footer {
+
+/* footer */
+.footer-menu {
 	text-align: center; 
 	padding: 30px 30px;
 	font-size: 12px;
 } 
 
-.footer li {
+.footer-menu li {
 	position: relative; 
-	display: inline; 			/* table-cell; */
+	display: unset;
 	padding: 0 3px 0 6px; 
 	white-space: nowrap;
 }
 
-.footer li:before {
+.footer-menu li:after {
 	content: '';
-	width: 1px; height: 12px;
-	background-color: #dbdbdb;
+	display: inline-block;
+	width: 1px; 
+	height: 12px;
+	border-left: 1px solid #dbdbdb;
 	position: absolute;
 	left: 0;
 	top: 2px;
 }
 
-.footer li:first-child:before {
+.footer-menu li:first-child:before {
 	width: 0;
 }
 
-.footer address {
-	padding-top: 15px;
+.address{
+	text-align: center;
+	font-size: 10px;
 }
+
+.address span:after {
+	content: '';
+	display: inline-block;
+	width: 1px;
+    height: 12px;
+    margin: 2px 4px 0 8px;
+    border-left: 1px solid #dbdbdb;
+    position: unset;
+}
+
 
 
 </style>
@@ -41,29 +57,43 @@
 </head>
 <body>
 
-<!-- 하단 -->
+<!-- footer -->
 <footer id="footer">
-        <div class="container">
+        <div class="postype-footer">
             <div class="row">
-                <div class="footer">
+                <div class="footer-menu">
                     <ul>
-                        <li><a href="#">서비스 소개</a></li>
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
-                        <li><a href="#">채용</a></li>
-                        <li><a href="#">도움 센터</a></li>
-                        <li><a href="#">권리침해신고센터</a></li>
-                        <li><a href="#">포스타입 파트너스</a></li>
-                        <li><a href="#">공식 채널</a></li>
-                        <li><a href="#">회사 소개</a></li>
-                        <li><a href="#">문의</a></li>
-                        <li><a href="#">브랜드 리소스</a></li>
-                        <li>&copy; POSTYPE, INC.</li>
+                       <li><a href="#">서비스 소개</a></li>
+                       <li><a href="#">이용약관</a></li>
+                       <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                       <li><a href="#">채용</a></li>
+                       <li><a href="#">도움 센터</a></li>
+                       <li><a href="#">권리침해신고센터</a></li>
+                       <li><a href="#">포스타입 파트너스</a></li>
+                       <li><a href="#">공식 채널</a></li>
+                       <li><a href="#">회사 소개</a></li>
+                       <li><a href="#">문의</a></li>
+                       <li><a href="#">브랜드 리소스</a></li>
+                       <li>&copy; POSTYPE, INC.</li>
                     </ul>
                 </div>
             </div>
+            	<div class="address">
+            		<address>
+						<span>주식회사 포스타입</span>
+						<span>사업자등록번호: 786-86-00336</span>
+						<span>통신판매업신고번호: 2018-서울강남-02900</span>
+						<span>대표자명: 신규섭</span>
+						<br>
+						<span>개인정보관리 책임자: 신규섭</span>
+						<span>주소: 서울시 강남구 테헤란로 4길 5, 6층, 11층</span>
+						<span>연락처: 02-6956-0827, 팩스: 02-6442-0128</span>
+						<br>
+						<span>포스타입은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 포스타입은 콘텐츠, 거래정보 및 거래에 대하여 책임을 지지 않습니다.</span>
+					</address>
+            	</div>
         </div>
-    </footer>
+</footer>
 
 </body>
 </html>
