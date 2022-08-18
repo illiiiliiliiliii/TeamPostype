@@ -175,7 +175,6 @@
 	margin: 10px;
 }
 
-<<<<<<< HEAD
 .feed-main {
 	padding: 24px 12px;
 }
@@ -185,6 +184,7 @@
 	width: 640px;
 	height: 183.49px;
 	padding: 24px 12px;
+	margin-bottom: 20px;
 }
 
 .post-list > div > a {
@@ -192,8 +192,8 @@
 }
 
 .post-data {
+	width: 472px;
 	float: left;
-	margin-bottom: 27px;
 }
 
 .post-data > a {
@@ -212,6 +212,25 @@
 	background: #EBF4FF;
 	padding: 2px 6px;
 	border-radius: 3px;
+}
+
+.text-color-black {
+	color: black;
+}
+
+p {
+	color: #00000078;
+	font-size: 15px;
+	margin: 0px 0px 16px;
+}
+
+.ellipsis-2 {
+	font-size: 20px;
+	color: black;
+}
+
+.post-info {
+	float: left;
 }
 
 .post-image {
@@ -251,11 +270,14 @@
 	color: #000;
 }
 
-
-.text-1 > a {
-	text-decoration-line: none;
-	color: rgba(0,0,0,.47)!important;
+.component-post-divider {
+	width: 640px;
+	display: flex;
+	justify-content: center;
+	height: 1px;
+	background: rgba(0,0,0,.05);
 }
+
 
 
 
@@ -324,7 +346,6 @@
 	-webkit-font-smoothing: antialiased;
 	color: #b4b4b4;
 }
->>>>>>> branch '2zo' of https://github.com/oueought/TeamPostype.git
 
 
 </style>
@@ -451,9 +472,79 @@
 				<div class="post">
 					<div class="post-data">
 						<a href="https://www.google.co.kr/">
+							<h3 class="ellipsis-2 text-color-black">천계영 작가 x 포스타입 특별 강연</h3>
+							<div class="ellipsis-2 text-alpha-black-47">
+								<p>'좋아하면 울리는'기획에서 IP사업까지, 천계영 작가님께 직접 듣고 질문해보세요.<p>
+							</div>
+						</a>
+						<div class="post-tags">
+							<a href="https://www.google.co.kr/">프로모션</a>
+						</div>
+					</div>
+					<div class="post-data-thumbnail">
+						<a href="https://www.google.co.kr/">
+							<img id="image" alt="post-image" src = "/TeamPostype/kimari/image/gray.png" alt="1~5화">
+						</a>
+					</div>
+				</div>
+				<div class="post-info">
+					<a class="user-profile" href="https://www.google.co.kr/">
+						<img id="user-image" alt="user-image" src = "/TeamPostype/kimari/image/gray.png" alt="기럭지미인">
+					</a>
+					<div class="post-info-body">
+						<div class="text-4">
+							<a href="https://www.google.co.kr/" rel="author">포스트타입</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="component-post-divider"></div>
+		
+		<div class="post-list">
+			<div>
+				<div class="post">
+					<div class="post-data">
+						<a href="https://www.google.co.kr/">
 							<h3 class="ellipsis-2 text-color-black">요정이야기</h3>
 							<div class="ellipsis-2 text-alpha-black-47">
-								<p>20살, 대학1학년, 나는 아이를 가졌다. 세상의 모든 '요정'.<p>
+								<p>20살, 대학1학년, 나는 아이를 가졌다. 세상의 모든 '요정'을 위해 꺼내 놓은 요정의 이야기.<p>
+							</div>
+						</a>
+						<div class="post-tags">
+							<a href="https://www.google.co.kr/">프로모션</a>
+						</div>
+					</div>
+					<div class="post-data-thumbnail">
+						<a href="https://www.google.co.kr/">
+							<img id="image" alt="post-image" src = "/TeamPostype/kimari/image/gray.png" alt="1~5화">
+						</a>
+					</div>
+				</div>
+				<div class="post-info">
+					<a class="user-profile" href="https://www.google.co.kr/">
+						<img id="user-image" alt="user-image" src = "/TeamPostype/kimari/image/gray.png" alt="기럭지미인">
+					</a>
+					<div class="post-info-body">
+						<div class="text-4">
+							<a href="https://www.google.co.kr/" rel="author">요정</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="component-post-divider"></div>
+		
+		<div class="post-list">
+			<div>
+				<div class="post">
+					<div class="post-data">
+						<a href="https://www.google.co.kr/">
+							<h3 class="ellipsis-2 text-color-black">소화진이 좀 이상해 보이는 건 기분 탓이겠지</h3>
+							<div class="ellipsis-2 text-alpha-black-47">
+								<p>왜 내 소환수만 인간이 된 거지?🧐 조금 특이한 소환수를 얻은 마법사의 이야기🧙<p>
 							</div>
 						</a>
 						<div class="post-tags">
@@ -478,11 +569,13 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="component-post-divider"></div>
 		
 	</div>
 
 	
-	<br>
+	<div class="feed-bottom"></div>
 	
 	
 <!--FOOTER -->
