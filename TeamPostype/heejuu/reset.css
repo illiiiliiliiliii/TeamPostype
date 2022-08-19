@@ -1,0 +1,205 @@
+/* Reset */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: var(--text-color);
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover,
+a:active,
+a:focus,
+a {
+  text-decoration: none;
+}
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: none;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  color: var(--text-color);
+  font-weight: 400;
+}
+body {
+  height: 100%;
+  position: relative;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  background: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/* input 기본 스타일 초기화 */
+input {
+  font-family: "Noto Sans KR", sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* input type number 에서 화살표 제거 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: transparent;
+}
+
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+:root {
+  --text-color: #121212;
+  --white: #fff;
+  --border05: 1px solid rgba(0, 0, 0, 0.05);
+  --border15: 1px solid rgba(0, 0, 0, 0.15);
+}
