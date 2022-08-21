@@ -16,11 +16,17 @@ body {
 }
 
 /* postype로고 글씨 크기 */
-.postype {
+.pst-header {
 	font-size: 20px;
 	font-weight: 700;
+	float: left;
+	margin-right : 25px;
 }
 
+.ctg-header {
+	float: left;
+	list-style-type: none; 
+}
 
 /* 카테고리 클릭시 나오는 메뉴의 밑줄 삭제 */
 a {
@@ -36,7 +42,7 @@ input {
 
 /* 카테고리 클릭시 반응, 글씨의 크기, 색  */
 label {
-	font-size: 14px;
+	font-size: 13px;
     cursor: pointer;
     color: black;
 }
@@ -50,6 +56,11 @@ label {
     list-style-type: none;
 }
 
+.web-header {
+	font-weight: 500;
+	font-size: 20px;
+}
+
 /* 카테고리 클릭시 메뉴 세로 정렬 */
 #category-menu:checked ~ .sub-menu {
     display: block;
@@ -59,6 +70,7 @@ label {
 .out-menu {
 	text-align: center;
 	list-style-type: none;
+	font-weight: 600;
 }
 
 /* 웹소설 페이지의 외부 메뉴의 영역 */
@@ -66,55 +78,6 @@ label {
 	display: inline-block;
 	padding: 5px;
 }
-
-/* 배경 사이즈, 색 */
-.category-header_webnovel {
-	background-color: #bfbfbf;
-	background-size: 250px 200px;
-	height: 150px;
-}
-
-/* 배경 */
-.title{
-	font-size: 20px;
-	font-weight: bold;
-	text-align: center;
-}
-
-/* 웹소설 페이지의 내부 메뉴의 가운데 정렬과 ·제거 */
-.in-menu {
-	text-align: center;
-	list-style-type: none; 
-}
-
-/* 웹소설 페이지의 내부 메뉴의 영역 */
-.in-menu1, .in-menu2, .in-menu3, .in-menu4, .in-menu5,
-.in-menu6, .in-menu7, .in-menu8, .in-menu9 {
-	display: inline-block;
-	padding: 5px;
-}
-
-/* 랭킹 집계 수평 정렬 */
-.ranking-time{
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content : space-between;
-}
-
-/* 랭킹 글씨 크기 */
-.ranking {
-	font-size: 15px;
-}
-/* 랭킹 글씨 색 */
-.beta {
-	color: #00BFFF
-}
-
-/* 랭킹 시간 글씨 색 */
-.time {
-	font-size: 12px;
-}
-
 
 </style>
 
@@ -125,29 +88,32 @@ label {
 </body>
 
 <!-- header -->
+<header>
 <div class="top-header"> <!-- 맨 위 상단바 -->
-	<span class="postype"><a href="#">POSTYPE</a></span>
-    <ul>
-        <li> <!-- 카테고리 메뉴 -->
-            <input type="checkbox" id="category-menu">	
-            <label for="category-menu" class="labelBtn" onclick="">카테고리</label>
-            <ul class="sub-menu">	
-                <li><a href="#">웹툰</a></li>
-                <li><a href="#">웹소설</a></li>
-                <li><a href="#">지식·에세이</a></li>
-                <li><a href="#">창작소재</a></li>
-                <li><a href="#">시각예술</a></li>
-                <li><a href="#">클래스</a></li>
-                <li><a href="#">팬창작</a></li>
-                <li><a href="#">포스타입 오리지널</a></li>
-            </ul>
-        </li>
-    </ul>
-    
+	<span class="pst-header"><a href="#">POSTYPE</a></span>
+    	<div>
+		    <ul>
+		        <li class="ctg-header"> <!-- 카테고리 메뉴 -->
+		            <input type="checkbox" id="category-menu">	
+		            <label for="category-menu" class="labelBtn" onclick="">카테고리</label>
+		            <ul class="sub-menu">	
+		                <li><a href="#">웹툰</a></li>
+		                <li><a href="#">웹소설</a></li>
+		                <li><a href="#">지식·에세이</a></li>
+		                <li><a href="#">창작소재</a></li>
+		                <li><a href="#">시각예술</a></li>
+		                <li><a href="#">클래스</a></li>
+		                <li><a href="#">팬창작</a></li>
+		                <li><a href="#">포스타입 오리지널</a></li>
+		            </ul>
+		        </li>
+		    </ul>
+   	 </div>
+   	<br><br>
 	<hr>
     
 	<!-- 웹소설 페이지의 외부 메뉴 -->
-	<a>웹소설</a>
+	<a class= "web-header">웹소설</a>
 	<div id="menu">
 		<ul class="out-menu">
 			<li class="out-menu1"><a href="#">홈</a></li>
@@ -157,46 +123,7 @@ label {
 	</div>
 	
 	<br>
-	
-	<!-- 배경라인 -->
-	<div class="category-header_webnovel">
-		<div class="title">웹소설</div>
-	</div>
-	
-	<br>
-	
-	<!-- 웹소설 페이지의 내부 메뉴 - >외부 메뉴와 동작이 같다 -->
-	<div id="menu">
-		<ul class="in-menu">
-			<li class="in-menu1"><a href="#">전체</a></li>
-			<li class="in-menu2"><a href="#">BL</a></li>
-			<li class="in-menu3"><a href="#">GL</a></li>
-			<li class="in-menu4"><a href="#">로맨스</a></li>
-			<li class="in-menu5"><a href="#">고전</a></li>
-			<li class="in-menu6"><a href="#">판타지</a></li>
-			<li class="in-menu7"><a href="#">학원</a></li>
-			<li class="in-menu8"><a href="#">일상</a></li>
-			<li class="in-menu9"><a href="#">호러</a></li>
-		</ul>
-	</div>
-	
-	<br>
-	<hr>
-	<br>
-	
-	<!-- 랭킹 집계 시간 -->
-	<div class="ranking-time">
-		<h2 class="ranking">랭킹 <small class="beta">beta</small></h2>
-		<div class="time">
-			<time>2022.08.17. 15:00</time>
-		</div>
-	</div>
-
 </div>
-
-<br>
-<hr>
-<br>
-
+</header>
 
 </html>

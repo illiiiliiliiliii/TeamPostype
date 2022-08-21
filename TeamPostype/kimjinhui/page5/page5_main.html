@@ -3,8 +3,470 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style type="text/css">
+
+/* main */
+
+/* 탑 배너의 배경 사이즈, 색 */
+.top-banner {
+	background-color: #bfbfbf;
+	background-size: 250px 200px;
+	height: 150px;
+}
+
+/* 탑 배너의 글씨 */
+.title{
+	font-size: 33px;
+	font-weight: 500;
+	text-align: center;
+	padding : 53px 0px;
+}
+
+/* 웹소설 페이지의 내부 메뉴의 가운데 정렬과 ·제거 */
+.in-menu {
+	text-align: center;
+	list-style-type: none; 
+}
+
+/* 웹소설 페이지의 내부 메뉴의 영역 */
+.in-menu1, .in-menu2, .in-menu3, .in-menu4, .in-menu5,
+.in-menu6, .in-menu7, .in-menu8, .in-menu9 {
+	display: inline-block;
+	padding: 5px;
+}
+
+/* 랭킹 집계 수평 정렬 */
+.ranking-time{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content : space-between;
+}
+
+/* 랭킹 폰트 크기 */
+.ranking {
+	font-size: 18px;
+}
+/* 랭킹 폰트 색 */
+.beta {
+	color: #00BFFF;
+}
+
+/* 랭킹의 시간 폰트 */
+.time {
+	font-size: 15px;
+	color: #A9A9A9;
+}
+
+/* 미들 배너 가운데 정렬 */
+.middle-banner {
+	text-align: center;
+}
+
+body {
+  margin-left: 50px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 소설책 목록을 감싸는 중간 박스 */
+.webnovle-list {
+  display: inline-block;
+}
+
+/* 소설책 하나에 대한 박스 */
+.webnovle {
+  margin-top: 20px;
+}
+
+/* 소설책 이미지 박스 사이즈 */
+.rank-image {
+  width: 105px;
+  height: 128px;
+  float: left;
+}
+
+/* 소설 이름, 작가, 줄거리 등의 박스 효과  */
+.novle-name {
+	float: left;
+}
+
+/* 소설책의 이름 폰트 */
+.text1 {
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 35px;
+	margin-bottom: 8px;
+	display: inline-block;
+	color: black;
+}
+
+/* 소설책의 작가 폰트 */
+.text2 {
+	font-size: 13px;
+	margin-left: 35px;
+	margin-bottom: 8px;
+	display: inline-block;
+	color: black;
+}
+
+/* 조회수 등 */
+.novleicn {
+	font-size: 13px;
+	color: #A9A9A9;
+	
+}
+
+/* 소설책의 줄거리 폰트 */
+.text3 {
+	font-size: 15px;
+	margin-left: 35px;
+	margin-bottom: 20px;
+	display: inline-block;
+	color: #A9A9A9;
+}
+
+/* 소설책 관련 태그 */
+.webnovel-tag a {
+	font-size: 15px;
+	font-weight: 500;
+	margin-left: 35px;
+	display: inline-block;
+	color: #808080;
+	background: #DCDCDC;
+	border-radius: 6px;
+	padding: 3px 6px;
+}
+
+/* 페이지 넘김 */
+.page-box {
+	text-align: center;
+	list-style-type: none;
+	padding-bottom: 45px;
+	color: #808080;
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.pagination-number {
+	display: inline-block;
+	padding: 12px;
+}
+
+</style>
 </head>
 <body>
+
+<!-- main -->
+<main>
+
+	<!-- 탑 배너 -->
+	<div class="top-banner">
+		<div class="title">웹소설</div>
+	</div>
+	
+	<br>
+	
+	<!-- 웹소설 페이지의 내부 메뉴 - >외부 메뉴와 동작이 같다 -->
+	<div id="menu">
+		<ul class="in-menu">
+			<li class="in-menu1"><a href="#">전체</a></li>
+			<li class="in-menu2"><a href="#">BL</a></li>
+			<li class="in-menu3"><a href="#">GL</a></li>
+			<li class="in-menu4"><a href="#">로맨스</a></li>
+			<li class="in-menu5"><a href="#">고전</a></li>
+			<li class="in-menu6"><a href="#">판타지</a></li>
+			<li class="in-menu7"><a href="#">학원</a></li>
+			<li class="in-menu8"><a href="#">일상</a></li>
+			<li class="in-menu9"><a href="#">호러</a></li>
+		</ul>
+	</div>
+<br>
+<hr>
+<br>
+
+	<!-- 미들 배너 -->
+	<div class="middle-banner">
+		<a href="#"><img src="/TeamPostype/kimjinhui/img/gray.png" width="500" height="80"></a>
+	</div>
+<br>
+
+<!-- 랭킹 집계 시간 -->
+<div class="ranking-time">
+	<h2 class="ranking">랭킹 <small class="beta">beta</small></h2>
+	<div class="time">
+		<time>2022.08.17. 15:00</time>
+	</div>
+</div>
+
+<hr>
+
+<!-- 소설책 박스 -->
+<div class="main-list">  
+	<div class="webnovle-list">
+    	<div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">젊은 느티나무</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#">강신재</a>
+		                <span class="novleicn">109화 /</span>
+		                <span class="novleicn">연재</span>
+		                <span class="novleicn">조회수 3.7만</span>
+		                <span class="novleicn">좋아요 3.3천</span>
+						<span class="novleicn">댓글 269</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">나의 슬픔과 괴롬과 있는 대로의 지혜를 일점에 응집시켜 그의 눈 속을 응시하지 않을 수 없다.
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+          		</div>
+        </div>
+        <br>
+        <hr>
+        <div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">카프카를 읽는 밤</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#">구효서</a>
+		                <span class="novleicn">55화 /</span>
+		                <span class="novleicn">연재</span>
+		                <span class="novleicn">조회수 1.9만</span>
+		                <span class="novleicn">좋아요 1.7천</span>
+						<span class="novleicn">댓글 165</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">므슈 리가 할아버지의 과수원을 찾아온 것은 어떤 경위를 지난 뒤였는지 나는 알 수 없다.
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+          		</div>
+        </div>
+        <br>
+        <hr>
+        <div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">술 권하는 사회</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#">현진건</a>
+		                <span class="novleicn">43화 /</span>
+		                <span class="novleicn">연재</span>
+		                <span class="novleicn">조회수 10만</span>
+		                <span class="novleicn">좋아요 4.8천</span>
+						<span class="novleicn">댓글 315</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">죽은 사람에게서나 볼 수 있는 해쓱한 얼굴이 경련적으로 떨며 절망한 어조로 소근거렸다.
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+          		</div>
+        </div>
+        <br>
+        <hr>
+        <div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">샤갈의 마을에 내리는 눈</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#">박상우</a>
+		                <span class="novleicn">48화 /</span>
+		                <span class="novleicn">완결</span>
+		                <span class="novleicn">조회수 1.2만</span>
+		                <span class="novleicn">좋아요 1.2천</span>
+						<span class="novleicn">댓글 51</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">세상에는 여전히 폭설이 내리고, 비록 둘이지만 우리는 아직도 '우리'로 잔존하고 있다는 것을
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+
+          		</div>
+        </div>
+        <br>
+        <hr>
+        <div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">옥상의 민들레꽃</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#">박완서</a>
+		                <span class="novleicn">14화 /</span>
+		                <span class="novleicn">연재</span>
+		                <span class="novleicn">조회수 3.5천</span>
+		                <span class="novleicn">좋아요 232</span>
+						<span class="novleicn">댓글 132</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">궁전 아파트 사람들이 여태껏 행복했던 것은 다른 사람들이 그렇게 알아줬기 때문입니다.
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+          		</div>
+        </div>
+        <br>
+        <hr>
+        <div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">날개</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#">이상</a>
+		                <span class="novleicn">2화 /</span>
+		                <span class="novleicn">연재</span>
+		                <span class="novleicn">조회수 4.5천</span>
+		                <span class="novleicn">좋아요 129</span>
+						<span class="novleicn">댓글 69</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">벽에 기대어 앉아서 담배를 한 대 피워 물고 벼락이 떨어질 테거든 어서 떨어져라 하고 기다렸다.
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+          		</div>
+        </div>
+        <br>
+        <hr>
+        <div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">수난 이대</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#">하근찬</a>
+		                <span class="novleicn">52화 /</span>
+		                <span class="novleicn">연재</span>
+		                <span class="novleicn">조회수 1.1만</span>
+		                <span class="novleicn">좋아요 490</span>
+						<span class="novleicn">댓글 239</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">아무개는 죽었는지 살았는지 통 소식이 없는데, 우리 진수는 살아서 오늘 돌아오는 것이다.
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+          		</div>
+        </div>
+        <br>
+        <hr>
+        <div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">광장</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#"> 최인훈</a>
+		                <span class="novleicn">56화 /</span>
+		                <span class="novleicn">연재</span>
+		                <span class="novleicn">조회수 3.2천</span>
+		                <span class="novleicn">좋아요 78</span>
+						<span class="novleicn">댓글 9</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">스탠리와 리빙스턴 그리고 슈바이처와 헤밍웨이의 아프리카가 아니고 아프리카인의 아프리카였다.
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+          		</div>
+        </div>
+        <br>
+        <hr>
+        <div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">강아지똥</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#">권정생</a>
+		                <span class="novleicn">24화 /</span>
+		                <span class="novleicn">연재</span>
+		                <span class="novleicn">조회수 4.1만</span>
+		                <span class="novleicn">좋아요 1.1천</span>
+						<span class="novleicn">댓글 282</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">돌이네 흰둥이가 누고 간 똥입니다. 흰둥이는 아직 어린 강아지였기 때문에 강아지똥이 되겠습니다.
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+          		</div>
+        </div>
+        <br>
+        <hr>
+        <div class="webnovle">	<!-- 소설책 하나에 대한 박스 -->
+          <img class="rank-image" src="/TeamPostype/kimjinhui/img/gray.png" alt="novleimg">
+            <div class="novle-name">
+	         	<a class="text1" href="#?ver=1">서울, 1964년, 겨울</a><br>
+	         	 	<div>
+	         	 		<a class="text2" href="#">김승옥</a>
+		                <span class="novleicn">69화 /</span>
+		                <span class="novleicn">연재</span>
+		                <span class="novleicn">조회수 6.6천</span>
+		                <span class="novleicn">좋아요 398</span>
+						<span class="novleicn">댓글 3
+						</span>
+				    </div>
+	         	<a class="text3" href="#?ver=1">우리는 헤어졌다. 나는 마침 버스가 막 도착한 길 건너편의 버스 정류장으로 달려갔다.
+	          	</a><br>
+          	</div>          	
+          		<div class="webnovel-tag">
+		          	<a href="#?ver=1">웹소설</a>
+		          	<a href="#?ver=1">단편</a>
+		          	<a href="#?ver=1">중편</a>
+		          	<a href="#?ver=1">일상</a>
+          		</div>
+        </div>
+        <br>
+        <hr>
+	</div>
+</div>
+
+<div class="page-box">
+	<ul class="pagination">
+		<li class="pagination-number"><a href="#"> < </a></li>
+		<li class="pagination-number"><a href="#"> 1 </a></li>
+		<li class="pagination-number"><a href="#"> 2 </a></li>
+		<li class="pagination-number"><a href="#"> 3 </a></li>
+		<li class="pagination-number"><a href="#"> 4 </a></li>
+		<li class="pagination-number"><a href="#"> 5 </a></li>
+		<li class="pagination-number"><a href="#"> > </a></li>
+	</ul>
+</div>
+
+<br>
+<hr>
+
+</main>
 
 </body>
 </html>
