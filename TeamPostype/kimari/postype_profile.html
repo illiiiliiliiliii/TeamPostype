@@ -2,26 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>포스타입님의 포스타입 프로필</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
-<script>
-
-  $( document ).ready( function() {
-    var jbOffset = $( '.profile-nav' ).offset();
-    $( window ).scroll( function() {
-      if ( $( document ).scrollTop() > jbOffset.top ) {
-        $( '.profile-nav' ).addClass( 'navfixed' );
-      }
-      else {
-        $( '.profile-nav' ).removeClass( 'navfixed' );
-      }
-    });
-  } );
-  
-</script>
 
 <style type="text/css">
 
@@ -222,7 +204,6 @@
 }
 
 .profile-nav {
-display: flex;
 	width: 1000px;
 	height: 35px;
     border-bottom: 0.5px solid rgba(0,0,0,.1);
@@ -261,19 +242,18 @@ ul li{
 /* POST_STYLE */
 
 
-.feed-main {
+.post-list {
 	padding: 24px 12px; 
 }
 
 .post-list {
-
+	margin-bottom: 20px;
     width: 100%;
     width: 1000px;
     height: 183.49px;
-    margin-top: 35px;
 }
 
-.post-list > div > a {
+.post-list > div > a{
     text-decoration-line: none;
 }
 
@@ -283,21 +263,21 @@ ul li{
 
 .post-data-2 {
 	float: left;
-	width: 830px;
-}
-
-.post-data-2 > p {
-	font-size: 15px;
-	color: rgba(0, 0, 0, 0.47);
+	width: 800px;
+	margin-bottom: 27px;
+	margin-bottom: 0px;
 }
 
 .post-data-3 {
 	float: right;
+	width: 145px;
 }
 
 .post-data-4 {
     align-items: center;
 	margin-top: 15px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .series {
@@ -367,6 +347,7 @@ ul li{
 
 .profile {
 	float: left;
+	margin-left: 0px;
 }
 
 #profile-image {
@@ -381,12 +362,20 @@ ul li{
 	width: 506px;
     height: 15px;
    	font-size: 13px;
-   		margin-top: 15px;
+   	margin-top: 20px;
 }
 
 .user > a {
     text-decoration-line: none;
     color: #000;  
+}
+
+.component-post-divider {
+	width: 1000px;
+	display: flex;
+	justify-content: center;
+	height: 1px;
+	background: rgba(0,0,0,.05);
 }
 
 
@@ -469,7 +458,7 @@ ul li{
 <div class="header">
 	<div class="category"> 
 		<div class="logo-box">
-			<a href="http://www.postype.coom">
+			<a href="#">
 				<span id="logo">POSTYPE</span>
 			</a>
 		</div>
@@ -498,7 +487,7 @@ ul li{
 	</div>
 	<div class="profile-menu">
 		<a href="#">
-			<img id="profile-menu-image" alt="profile-menu-image" src="/resources/image/gray.png">
+			<img id="profile-menu-image" alt="profile-menu-image" src="/TeamPostype/1zo/image/pavicon.png">
 		</a>
 	</div>
 	</div>
@@ -533,7 +522,7 @@ ul li{
 	<div class="profile-content">
 		<div class="profile-body">
 			<div class="profile-user">
-				<img class="profile-img" alt="포스타입" src="/resources/image/gray.png">
+				<img class="profile-img" alt="포스타입" src="/TeamPostype/1zo/image/pavicon.png">
 			</div>
 				<h5 class="profile-title">포스타입</h5>
 			<div class="small">모든 창작자를 위한 콘텐츠 오픈마켓, 포스타입</div>
@@ -563,49 +552,138 @@ ul li{
 		</nav>
 	</div>
 </div>
- <!-- POST_LIST -->
 
-<div class="feed-main">
-		<div class="post-list">
-			<div class="post-data-1">
-				<a class="series" href="https://www.google.co.kr/">이벤트</a>
-			</div>
-			<div class="post-data-2">
-				<a class="post-title" href="https://www.google.co.kr/">
-				천계영 작가 x 포스타입 특별 강연</a><br>
-				<a class="post-info" href="https://www.google.co.kr/">참가 신청 : 2022년 8월 15일까지 ㅣ 강연 일정 : 8월 24일 오후 2~6시 </a>
-				<p><좋아하면 울리는> 기획에서 IP사업까지 안녕하세요, 포스타입입니다. 포스타입 작가님과 작품의 더 건강하고 지속가능한 성장을 위해 2022년 8월 24일, 천계영 작가님과 함께하는 여름방학 특강을 진행합니다. 수퍼 IP의 기획부터 확장까지. <좋아하면 울리는>의 창작 과정을 천계영 작가님께 직접 듣고 질문해보세요. 2022년 8월 15...</p>
-				<div class="post-tags">
-					<a href="https://www.google.co.kr/">프로모션</a>
-				</div>
-			</div>
-			<div class="post-data-3">
-				<div class="post-image">
-					<a href="https://www.google.co.kr/">
-						<img id="image" alt="post-image" src="/resources/image/gray.png">
-					</a>
-				</div>
-			</div>
-			<div class="post-data-4">
-				<div class="profile">
-				<a href="https://www.google.co.kr/">
-					<img id="profile-image" alt="profile-image" src="/resources/image/gray.png">
-				</a>
-				</div>
-				<div class="profile">
-					<div class="user">
-						<a href="https://www.google.co.kr/">포스타입</a>
-					</div>
-			
-				</div>
+<!-- POST_LIST -->
+
+
+<div class="post-list">
+	<div class="post-data-1">
+		<a class="series" href="#">BEST</a>
+	</div>
+	<div class="post-data-2">
+		<a class="post-title" href="/TeamPostype/3jo/page3.html">보건교사 안은영 1화</a><br>
+		<a class="post-info" href="/TeamPostype/3jo/page3.html">나의 슬픔과 괴롬과 있는 대로의 지혜를 일점에 응집시켜 그의 눈 속을 응시하지 않을 수 없다.</a><br>
+		<div class="post-tags">
+			<a href="#">프로모션</a>
+		</div>
+	</div>
+	<div class="post-data-3">
+		<div class="post-image">
+			<a href="/TeamPostype/3jo/page3.html">
+				<img id="image" alt="post-image" src="/TeamPostype/3jo/A.gif">
+			</a>
+		</div>
+	</div>
+	<br>
+	<div class="post-data-4">
+		<div class="profile">
+			<a href="#">
+				<img id="profile-image" alt="profile-image" src="/TeamPostype/1zo/image/pavicon.png">
+			</a>
+		</div>
+		<div class="profile">
+			<div class="user">
+				<a href="#">포스타입</a>
 			</div>
 			
 		</div>
-	<div class="component-post-divider"></div>	
-	
 	</div>
-	
-	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<div class="component-post-divider"></div>	
+
+<div class="post-list">
+	<div class="post-data-1">
+		<a class="series" href="#">EVENT</a>
+	</div>
+	<div class="post-data-2">
+		<a class="post-title" href="/TeamPostype/3jo/page3.html">오리지널 작품 구매/후원하고, 500 포인트 받아가세요! 💰</a><br>
+		<a class="post-info" href="/TeamPostype/3jo/page3.html">포스타입 작가 ❤️ 독자 감사 이벤트(2)의 일환으로 진행됩니다.| 오리지널 채널을 구독🎯해주세요!</a><br>
+		<div class="post-tags">
+			<a href="#">포스타입</a>
+		</div>
+		<div class="post-tags">
+			<a href="#">이벤트</a>
+		</div>
+		<div class="post-tags">
+			<a href="#">웹툰</a>
+		</div>
+		<div class="post-tags">
+			<a href="#">웹소설</a>
+		</div>
+		<div class="post-tags">
+			<a href="#">오디오</a>
+		</div>
+	</div>
+	<div class="post-data-3">
+		<div class="post-image">
+			<a href="#">
+				<img id="image" alt="post-image" src="/TeamPostype/2zo/image/gray.png">
+			</a>
+		</div>
+	</div>
+	<br>
+	<div class="post-data-4">
+		<div class="profile">
+			<a href="#">
+				<img id="profile-image" alt="profile-image" src="/TeamPostype/1zo/image/pavicon.png">
+			</a>
+		</div>
+		<div class="profile">
+			<div class="user">
+				<a href="#">포스타입</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="component-post-divider"></div>	
+
+<div class="post-list">
+	<div class="post-data-1">
+		<a class="series" href="#">EVENT</a>
+	</div>
+	<div class="post-data-2">
+		<a class="post-title" href="/TeamPostype/3jo/page3.html">[종료]오리지널 작품에 댓글 달고, 포인트 받아가세요!💌</a><br>
+		<a class="post-info" href="/TeamPostype/3jo/page3.html">포스타입 작가❤️ 독자 감사 이벤트(1)의 일환으로 진행됩니다. | 오리지널 채널을 구독💘해주세요!</a><br>
+		<div class="post-tags">
+			<a href="#">프로모션</a>
+		</div>
+		<div class="post-tags">
+			<a href="#">웹툰</a>
+		</div>
+		<div class="post-tags">
+			<a href="#">웹소설</a>
+		</div>
+		<div class="post-tags">
+			<a href="#">이벤트</a>
+		</div>
+	</div>
+	<div class="post-data-3">
+		<div class="post-image">
+			<a href="#">
+				<img id="image" alt="post-image" src="/TeamPostype/2zo/image/gray.png">
+			</a>
+		</div>
+	</div>
+	<br>
+	<div class="post-data-4">
+		<div class="profile">
+			<a href="#">
+				<img id="profile-image" alt="profile-image" src="/TeamPostype/1zo/image/pavicon.png">
+			</a>
+		</div>
+		<div class="profile">
+			<div class="user">
+				<a href="#">포스타입</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+	<div class="component-post-divider" style="margin-bottom: 200px"></div>	
 
 <!--FOOTER -->
 
