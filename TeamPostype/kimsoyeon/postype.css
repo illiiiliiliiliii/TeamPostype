@@ -17,13 +17,6 @@
     margin: 0 auto;
 
 }
-.head2 {
-    background-color: transparent; 
-    width:1000px;
-    height:50px;
-    margin: 0 auto;
-
-}
 
 .postype-logo {
     font-size: 25px;
@@ -57,36 +50,32 @@
     line-height:50px;
     text-decoration: none;
 }
-.searchbox {
+
+.searchbox{
+	display: inline;
 	margin: auto 0;
-    width: 180px;
-    height: 50px;
-    display: inline;
+    width: 200px;
+    height: 40px;
     padding: 0;
     margin: 0;
 }
 
 
 .searchbox>input[name=searchbox]{
-    padding: 0;
-	width: 240px;
-	height: 20px;
+	padding: 0;
+    width: 200px;
+    height: 20px;
     margin-top: 15px;
-    margin-right: 0px;
-	margin-left: 500px;
+    margin-left: 250px;
     font-family: ns-thin;
     background-image: url(/TeamPostype/kimsoyeon/image/search.png);
-    border-bottom-left-radius: 160px;
-	border-bottom-right-radius: 160px;
-	border-top-left-radius: 160px;
-	border-top-right-radius: 160px;
     background-repeat: no-repeat;
     background-position: 2% 3px;
- 	border: 1px solid rgba(0,0,0,.1);
-    background-size: 20px;
-    padding-left: 30px;
+    border: 1px solid gainsboro;
+    background-size: 15px;
+    padding-left: 20px;
     border-radius: 10px;
-   	background-color: rgb(250, 250, 250);
+    background-color: rgb(244, 243, 243);
    
 }
 
