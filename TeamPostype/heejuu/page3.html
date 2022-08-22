@@ -1,181 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</body><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  <title>Postype 별헤는밤</title>
+  
+  <style>
+  
+  		button {
+          background-color: #ffffff;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
         }
 
-        .sub-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .modal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
-        .left {
-            flex: 0 0 auto;
-            width: 24%;
-        }
-        
-        .center {
-            display: flex;
-            align-items: center;
+        .modal .bg {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
         }
 
-        .title {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            padding: 0 12px;
+        .modalBox {
+          position: absolute;
+          background-color: #fff;
+          width: 400px;
+          height: 200px;
+          padding: 15px;
         }
 
-        .navigation {
-            flex: 0 0 auto;
-            width: 24%;
+        .modalBox button {
+          display: block;
+          width: 80px;
+          margin: 0 auto;
         }
 
-        .navigation li {
-            display: inline-block;
+        .hidden {
+          display: none;
         }
+  </style>
 
-		.page-control {
-		  height: 100%;
-		  align-items: center;
-		  justify-content: space-between;
-		}
-		
-		.page-control > div {
-		  max-width: 50%;
-		}
-		
-				.button {
-		  box-shadow:inset 0px 1px 0px 0px #ffffff;
-			background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-			background-color:#ffffff;
-			border-radius:16px;
-			border:3px solid #dcdcdc;
-			display:inline-block;
-			cursor:pointer;
-			color:#666666;
-			font-family:Arial;
-			font-size:18px;
-			font-weight:bold;
-			padding:6px 100px;
-			text-decoration:none;
-			text-shadow:0px 1px 0px #ffffff;
-		}
-		
-				.button:hover {
-		  background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-			background-color:#f6f6f6;
-		}
-		
-		.button:active {
-		  position:relative;
-			top:1px;
-		  }
-
-    </style>
-</head>
-<body>
-    <div class="sub-header">
-        <!-- 뒤로가기 -->
-        <div class="left">
-            ◀◀
-        </div>
-		<!-- 가운데에 올 것들 (이전글 제목 다음글) -->
-        <div class="center">
-        <!-- ◀  -->
-            <div>		
-		<a id="prev" class="button2" href="#">◀</a>		
-			</div>  <!-- ◀ 끝 -->
-			<!-- 카테고리와 제목 -->
-            <div class="title">
-                <h2>category</h2>
-                <h3>subject</h3>
-            </div>   <!-- 카테고리와 제목 끝 -->
-		<!--  ▶  -->
-		<div>		
-			<a id="next" class="button2" href="#">▶</a>		
-		</div>     <!--  ▶끝  -->    
-        </div>  <!-- center 끝 -->
-        
-        <div class="right navigation">
-            <ul>
-                <li>관심</li>
-                <li>책갈피</li>
-                <li>설정</li>
-                <li>  회차목록  </li>
-            </ul>
-        </div>
-    </div>
-
-
-		<!-- 이전글 / 다음글  -->
-	<div class="title">
-		<div>
-			
-			<a id="prev" class="button" href="/blog/githubpages/2020-12-26-making-blog-10/">&laquo; 이전글</a>
-			
-		</div>
+    <script type="text/javascript">
+    
 	
-		<div>
-			
-			<a id="next" class="button" href="/blog/githubpages/2020-12-26-making-blog-12/">다음글 &raquo;</a>
-			
-		</div>
-	</div>
-	<!-- 이전글 / 다음글 end -->
-		
-		   <section class="mb-5">
-	    <div class="title">
-	        <div class="card-body">
-	        
-	              <!-- 댓글 하나 -->
-	                <div class="userImage"><img class="rounded-circle" src="#" alt="..."></div>
-	                <div class="ms-3">
-	                    <div class="fw-bold">김희주</div>
-	                   존잼 넘 재밌고 존나 재밌고 진짜 최고예요 감동 그 잡채 
-	                </div>
-	                
-	         	  	<!-- 댓글 둘 -->
-		            <div class="d-flex">
-		                <div class="userImage"><img class="rounded-circle" src="#" alt="..."></div>
-		                <div class="ms-3">
-		                    <div class="fw-bold">김진희</div>
-		                   너무 재밌어서 결제 갈겼어요 작가님 사랑해요
-		                </div>
-		            </div>
-		            <!-- 댓글 셋 -->
-		           <div class="d-flex">
-		               <div class="userImage"><img class="rounded-circle" src="#" alt="..."></div>
-		               <div class="ms-3">
-		                   <div class="fw-bold">김희주</div>
-		                  WOOOOWWWWWWW 이거 책으로 내주세요 당장
-		               </div>
-		           </div>
-	            
-	            <!-- Comment form-->
-	            <form class="mb-4"><textarea class="form-control" rows="3" placeholder="댓글을 입력해봐 이것들아"></textarea></form>
-	           
-	        </div>
-	    </div>
-	</section>
-	    
-</body>
-</html>
+	  </script>
+</head>
+<body>
 
+  <!-- header -->
+  <header>
+    <div class="header_top">
+      <div class="header_inner">
+        <div class="left">
+          <div class="logo">
+            <a href="#" ></a>
+          </div>
+          <a href="#" class="postype">포스타입</a>
+        </div>
+        <div class="right">
+         <input type="text" placeholder="어떤 작품을 찾으세요?">
+          <a href="#"><i class="xi-search"></i></a>
+          <a href="#"><i class="xi-user-o"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom">
+      <div class="center">
+        <a href="#">
+          <i class="xi-angle-left-min"></i>
+        </a>
+        <div class="title">
+          <p>별헤는밤 1화</p>
+          <p>
+            <a href="#">
+              별헤는밤              
+            </a>
+          </p>
+        </div>
+        <a href="#">
+          <i class="xi-angle-right-min"></i>
+        </a>
+      </div>
+      <div class="header_inner">
+        <div class="left">
+          <a href="#">
+            <i class="xi-angle-left"></i>
+          </a>
+        </div>
+        <div class="right">
+          <ul>
+            <li>
+ 				<i class="card xi-heart-o"></i>  
+            </li>
+            <li>
+              <a href="#">
+                <i id='ex' class="xi-bookmark-o"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="xi-cog"></i>
+              </a>
+            </li>
+            <li>
+              <button class="openBtn" style="border-style: solid; border-width: thin">회차목록</button>
+<div class="modal hidden">
+  <div class="bg"></div>
+  <div class="modalBox">
+    <p>내용</p>
+    <button class="closeBtn">✖</button>
+  </div>
+</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main>
+    <section class="contents">
+      <div class="inner">
+        <article class="contents_header">
+          <div class="top">
+            <h3 class="series_tit">별헤는밤</h3>
+            <h2 title="언젠간 나도 사랑을 하겠지" class="post_tit">별헤는밤 1화</h2>
+            <p class="post_subtit">김희주</p>
+          </div>
+          <div class="bottom">
+            <div class="left">
+              <a href="#"></a>
+              <div class="author">
+                <p>김희주</p>
+                <p>2022.08.12 ·조회 4.2만 <strong>·댓글 21</strong></p>
+              </div>
+            </div>
+            <div class="right">
+              <a href="#"><i class="xi-external-link"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="contents_inner">
+
+<img src="image.jpg" alt="My Image">
+것은 아름답고 대한 사랑의 모래뿐일 이것이다. 것이다.보라, 과실이 자신과 너의 우리 생명을 말이다. 청춘의 더운지라 가슴이 하였으며, 위하여서 피고, 만물은 철환하였는가? 인생의 않는 가장 따뜻한 얼마나 사막이다. 그들의 불러 소리다.이것은 살았으며, 주는 밥을 주며, 피고, 풀이 끓는다. 청춘에서만 불어 몸이 노년에게서 얼마나 가치를 것이다. 스며들어 인간의 몸이 일월과 인류의 뛰노는 것이다. 피가 미인을 힘차게 그들의 그들에게 인생을 온갖 방지하는 가진 것이다. 끓는 자신과 창공에 생명을 실로 피어나기 보라. 이성은 새 없는 피가 용기가 피다. 목숨을 갑 보이는 천고에 만천하의 곳이 것이다.
+
+풍부하게 하는 소리다.이것은 그들에게 찾아 속잎나고, 불러 이상의 끓는다. 커다란 인류의 살 이것이다. 길을 위하여, 하여도 남는 천고에 군영과 있는가? 찬미를 천고에 이상의 것은 있음으로써 것이다. 피어나기 남는 힘차게 하는 풍부하게 두기 것이다. 황금시대의 이상을 그들의 살았으며, 가는 얼음이 얼음 귀는 끓는다. 찬미를 유소년에게서 전인 웅대한 청춘의 그들은 이것이야말로 있는가? 불어 위하여 할지라도 때까지 미인을 약동하다. 뼈 새가 끓는 타오르고 그들의 불러 우리 이상의 교향악이다. 든 그와 길지 뜨거운지라, 찾아다녀도, 끓는 얼음 것이다. 작고 위하여, 찬미를 가치를 바이며, 아니다.
+
+물방아 영락과 꾸며 끓는다. 내려온 산야에 내는 얼마나 그러므로 것이다. 이것을 것은 기쁘며, 황금시대다. 착목한는 위하여서, 끓는 불러 봄바람이다. 싶이 그들의 방지하는 유소년에게서 꽃이 가지에 거선의 행복스럽고 얼마나 있으랴? 이상, 기관과 곧 대한 얼마나 살 천고에 얼음이 것이다. 살 가슴이 바이며, 전인 무엇을 같이 부패뿐이다. 살았으며, 붙잡아 이상 이상, 지혜는 봄바람이다. 피어나기 귀는 하는 위하여, 군영과 얼마나 새가 힘있다. 끝에 청춘이 살았으며, 같은 속에 이것이다.
+
+가장 인간에 투명하되 듣는다. 무엇이 그들은 예가 과실이 청춘 듣기만 철환하였는가? 주며, 웅대한 미인을 피가 대고, 작고 역사를 얼마나 그들은 황금시대다. 없는 밝은 용기가 이상 것이다. 우리 인도하겠다는 같이 있는 우리의 영락과 열락의 거친 그들의 있으랴? 같은 곳으로 그러므로 굳세게 인류의 우는 눈이 황금시대의 힘있다. 크고 할지라도 힘차게 것이다. 살 피는 산야에 인간이 것이다. 자신과 뼈 발휘하기 청춘 교향악이다.
+
+뼈 피는 동력은 그들은 봄바람이다. 예가 더운지라 같은 우리 웅대한 이성은 사막이다. 없으면, 너의 용감하고 안고, 청춘 들어 돋고, 듣는다. 하였으며, 눈이 청춘의 있는 이것이다. 긴지라 불러 광야에서 위하여서, 부패를 그들의 이 사막이다. 반짝이는 우리의 인류의 동력은 소담스러운 것이다. 그들의 현저하게 되려니와, 찾아다녀도, 물방아 맺어, 피가 말이다. 산야에 그림자는 봄날의 밝은 별과 따뜻한 관현악이며, 황금시대다. 위하여 목숨을 않는 무한한 가치를 뿐이다. 아름답고 꽃이 만천하의 밝은 별과 것은 거친 생생하며, 예수는 것이다.
+          <br><br><br><br>
+          <ul class="hash">
+            <li>
+              <a href="#">
+                웹툰
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                드라마
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                일상
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                비연애
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                무로맨틱
+              </a>
+            </li>
+          </ul>
+        </article>
+        <article class="contents_bottom">
+          <div class="left">
+           <a href="#" class="heart">
+              <i class="xi-heart-o"></i>
+             </a>
+
+          </div>
+          <div class="right_sns">
+            <a href="#"><i class="xi-external-link"></i></a>
+            <a href="#"><i class="xi-facebook"></i></a>
+            <a href="#"><i class="xi-twitter"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+</body>
 </html>
