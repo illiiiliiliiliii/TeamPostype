@@ -1,8 +1,10 @@
+@charset "UTF-8";
+
 /* Header1 CSS */
 .header{
     position: fixed;
     margin: 0 auto;
-    left:0;
+    left: 0;
     right: 0;
     padding: 0;
     background-color: white;
@@ -302,16 +304,11 @@ img {
 }
 
 #sliderbox {
-	width: 500px;
-	height: 600px;
-	border: none;
-
-	/* 외부 정렬 */
+	width: 600px;
+	height: 400px;
+	border: 1px solid #ccc;
 	margin: 0 auto;
-
-	/* div영역을 벗어난 부분 안보이도록 처리 */
  	overflow: hidden;
-/* 	overflow: visible; */
 }
 
 #slider {
