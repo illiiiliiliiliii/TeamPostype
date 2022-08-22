@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Header1 CSS */
 .header{
     position: fixed;
@@ -10,14 +12,21 @@
 
 .head1 {
     background-color: transparent; 
-    width:800px;
+    width:1000px;
+    height:50px;
+    margin: 0 auto;
+
+}
+.head2 {
+    background-color: transparent; 
+    width:1000px;
     height:50px;
     margin: 0 auto;
 
 }
 
 .postype-logo {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bolder;
     margin-left: 10px;
     display: inline;
@@ -27,7 +36,7 @@
 }
 .category {
     width: 100px;
-    height: 30px;
+    height: 50px;
     font-size: 10px;
     margin-left: 15px;
     display: inline;
@@ -48,9 +57,10 @@
     line-height:50px;
     text-decoration: none;
 }
-.searchbox{
-    width: 200px;
-    height:40px;
+.searchbox {
+	margin: auto 0;
+    width: 180px;
+    height: 50px;
     display: inline;
     padding: 0;
     margin: 0;
@@ -59,27 +69,33 @@
 
 .searchbox>input[name=searchbox]{
     padding: 0;
-    width: 200px;
-    height: 20px;
+	width: 240px;
+	height: 20px;
     margin-top: 15px;
-    margin-left: 250px;
+    margin-right: 0px;
+	margin-left: 500px;
     font-family: ns-thin;
     background-image: url(/TeamPostype/kimsoyeon/image/search.png);
+    border-bottom-left-radius: 160px;
+	border-bottom-right-radius: 160px;
+	border-top-left-radius: 160px;
+	border-top-right-radius: 160px;
     background-repeat: no-repeat;
     background-position: 2% 3px;
-    border: 1px solid gainsboro;
-    background-size: 15px;
+ 	border: 1px solid rgba(0,0,0,.1);
+    background-size: 20px;
     padding-left: 30px;
     border-radius: 10px;
-    background-color: rgb(244, 243, 243);
+   	background-color: rgb(250, 250, 250);
+   
 }
 
 .cleakbox{
-    width: 100px;
-    height: 30px;
+    width: 85px;
+    height: 50px;
     display: inline;
     float: right;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .head2 {
@@ -217,7 +233,7 @@ img {
 
 .footer {
    display: flex;
-     flex-direction: column;
+   flex-direction: column;
    padding: 24px 0 25px;
    text-align: center;
    color: #909090;
@@ -288,8 +304,8 @@ img {
 }
 
 #sliderbox {
-	width: 600px;
-	height: 618px;
+	width: 500px;
+	height: 600px;
 	border: none;
 
 	/* 외부 정렬 */
