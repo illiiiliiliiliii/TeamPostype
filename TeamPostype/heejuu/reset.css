@@ -150,7 +150,15 @@ img {
   vertical-align: top;
   width: 100%;
 }
-
+textarea {
+  padding: 1rem;
+  color: var(--text-color);
+  border: none;
+  resize: none;
+  font-family: "Noto Sans KR";
+  box-sizing: border-box;
+  color: var(--text-color);
+}
 textarea:focus {
   outline: none;
 }
@@ -182,7 +190,34 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
 }
 
-
+/* input radio */
+input[type="radio"] {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: var(--border15);
+  border-radius: 50%;
+  outline: none;
+  background: var(--white);
+  position: relative;
+}
+input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input[type="radio"]:checked {
+  background: black;
+}
+input[type="radio"]:checked:before {
+  background: var(--white);
+}
 
 button {
   border: none;
