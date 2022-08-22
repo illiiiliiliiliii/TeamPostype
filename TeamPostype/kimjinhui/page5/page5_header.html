@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+/* header */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+	margin-left: 195px;
+	margin-right: 196px;
+}
+
+/* postype로고 글씨 크기 */
+.pst-header {
+	font-size: 20px;
+	font-weight: 700;
+	float: left;
+	margin-right : 25px;
+}
+
+.ctg-header {
+	float: left;
+	list-style-type: none; 
+}
+
+/* 카테고리 클릭시 나오는 메뉴의 밑줄 삭제 */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* 카테고리 체크박스 제거 */
+input {
+    position: fixed;
+    left: -9999px;
+}
+
+/* 카테고리 클릭시 반응, 글씨의 크기, 색  */
+label {
+	font-size: 13px;
+    cursor: pointer;
+    color: black;
+}
+
+/* 카테고리 클릭시 나오는 메뉴 */
+.sub-menu {
+    display:none;
+    padding: 3px;
+    font-size: 12px;
+    font-weight: nomal;
+    list-style-type: none;
+}
+
+.web-header {
+	font-weight: 500;
+	font-size: 20px;
+}
+
+/* 카테고리 클릭시 메뉴 세로 정렬 */
+#category-menu:checked ~ .sub-menu {
+    display: block;
+}
+
+/* 웹소설 페이지의 외부 메뉴의 가운데 정렬과·제거 */
+.out-menu {
+	text-align: center;
+	list-style-type: none;
+	font-weight: 600;
+}
+
+/* 웹소설 페이지의 외부 메뉴의 영역 */
+.out-menu1, .out-menu2, .out-menu3 {
+	display: inline-block;
+	padding: 5px;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+<div class="top-header"> <!-- 맨 위 상단바 -->
+	<span class="pst-header"><a href="#">POSTYPE</a></span>
+    	<div>
+		    <ul>
+		        <li class="ctg-header"> <!-- 카테고리 메뉴 -->
+		            <input type="checkbox" id="category-menu">	
+		            <label for="category-menu" class="labelBtn" onclick="">카테고리</label>
+		            <ul class="sub-menu">	
+		                <li><a href="#">웹툰</a></li>
+		                <li><a href="#">웹소설</a></li>
+		                <li><a href="#">지식·에세이</a></li>
+		                <li><a href="#">창작소재</a></li>
+		                <li><a href="#">시각예술</a></li>
+		                <li><a href="#">클래스</a></li>
+		                <li><a href="#">팬창작</a></li>
+		                <li><a href="#">포스타입 오리지널</a></li>
+		            </ul>
+		        </li>
+		    </ul>
+   	 </div>
+   	<br><br>
+	<hr>
+    
+	<!-- 웹소설 페이지의 외부 메뉴 -->
+	<a class= "web-header">웹소설</a>
+	<div id="menu">
+		<ul class="out-menu">
+			<li class="out-menu1"><a href="#">홈</a></li>
+			<li class="out-menu2"><a href="#">랭킹</a></li>
+			<li class="out-menu3"><a href="#">최신</a></li>
+		</ul>
+	</div>
+	
+	<br>
+</div>
+</header>
+</body>
+
+
+</html>
