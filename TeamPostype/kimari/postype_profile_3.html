@@ -5,6 +5,24 @@
 <title>포스타입님의 포스타입 프로필</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script>
+
+  $( document ).ready( function() {
+    var jbOffset = $( '.profile-nav' ).offset();
+    $( window ).scroll( function() {
+      if ( $( document ).scrollTop() > jbOffset.top ) {
+        $( '.profile-nav' ).addClass( 'navfixed' );
+      }
+      else {
+        $( '.profile-nav' ).removeClass( 'navfixed' );
+      }
+    });
+  } );
+  
+</script>
+
 <style type="text/css">
 
 * {
@@ -18,7 +36,7 @@
 .header {
 	position: fixed;
   	top: 0;
-	width: 1905px;
+	width: 1900px;
 	height: 60px;
 	align-items: center;
 	background-color: #fff;
@@ -26,18 +44,18 @@
 
 .category {
 	display: flex;
-	align-items: center;
-		
+	align-items: center;	
 }
 
 .logo-box {
-	width: 1052px;
+	width: 108px;
 	height: 60px;
 	line-height: 60px;
 	font-family: Arial;
 	font-weight: 600;
 	font-size: 23px;
 	margin-left: 220px;
+	margin-right: 30px;
 }
 
 .logo-box > a {
@@ -45,23 +63,82 @@
 	color: black;
 }
 
+.category-dropdown {
+	margin-left: 0px;
+	margin-right: 0px;
+	font-size: 17px;
+	margin-top: 4px;
+}
+
+.category-dropdown > a {
+	text-decoration-line: none;
+	color: black;
+}
+
+.category-icon-wrapper {
+	margin: 2px 0px 0px 2px;
+	float: right;
+}
+
+.m-nav {
+	margin-left: 20px;
+    margin-right: 0px;
+}
+
+.search-form {
+	margin-right: 0px;
+	margin-left: 400px;
+	border: 1px solid rgba(0,0,0,.1);
+	background-color: rgb(250, 250, 250);
+	border-bottom-left-radius: 160px;
+	border-bottom-right-radius: 160px;
+	border-top-left-radius: 160px;
+	border-top-right-radius: 160px;
+	width: 260px;
+	height: 36px;
+}
+
+#search {
+	font-size: 22px;
+	margin-top: 4px;
+	margin-left: 8px
+}
+
+
+.messages, .notification { 
+	background-color: #fff;
+	border: #fff;
+	margin-right: 10px;
+}
+
+.profile-menu {
+    margin-left: 5px;
+    margin-right: 0px;
+}
+
+#profile-menu-image {
+	width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    vertical-align: middle;
+    border-style: none;
+}
+
 #profile {
     box-shadow: 0 1px rgba(0,0,0,.05);
     position: fixed;
     background-color: #fff;
-    right: 0px;
-    left: 0px;
 }
 
 .navbar {
-	width: 1000px;
+	width: 1050px;
 	height: 48px;
 	margin: 0px 186.5px;
 	align-items: center;
 	display: flex;
-	padding-right: 20px;
+	padding-right: 50px;
     padding-left: 20px;
-	
 }
 
 .navbar-left {
@@ -140,21 +217,22 @@
 	border-color: #3478FF; 
 }
 
-.material-icons {
-	font-size: 18px; 
-}
-
 .text {
 	margin-left: 3px;
 }
 
 .profile-nav {
+display: flex;
 	width: 1000px;
 	height: 35px;
     border-bottom: 0.5px solid rgba(0,0,0,.1);
     background-color: #fff;
 }
 
+.navfixed {
+position: fixed;
+top: 0px;
+}
 
 .nav-item {
 	width: 60px;
@@ -320,6 +398,7 @@ ul li{
 	background: rgba(0,0,0,.05);
 }
 
+
 /* FOOTER_STYLE */
 
 
@@ -387,6 +466,7 @@ ul li{
 }
 
 
+
 </style>
 
 </head>
@@ -402,6 +482,34 @@ ul li{
 				<span id="logo">POSTYPE</span>
 			</a>
 		</div>
+		<div class="category-dropdown">
+			<a class="dropdown" href="#" data-toggle="dropdown" aria-expanded="false">카테고리</a>
+			<div class="category-icon-wrapper">
+				<img alt="icon" src="https://d33pksfia2a94m.cloudfront.net/assets/img/icon/angle-down-gray.svg">
+			</div>
+			<div class="dropdown-menu">
+			</div>
+		</div>
+		<div class="search-form">
+			<form class="search" id="search" action="/search">
+				<div class="inner">
+					<span class="material-icons" id="search">search</span>
+				</div>
+			</form>
+		</div>
+		<div class="m-nav">
+			<button class="messages" id="messages" type="button" aria-label="메시지">
+				<span class="material-icons">mail_outline</span>
+			</button>
+		<button class="notification" id="notification" type="button" aria-label="알림">
+			<span class="material-icons">notifications_none</span>	
+		</button>
+	</div>
+	<div class="profile-menu">
+		<a href="#">
+			<img id="profile-menu-image" alt="profile-menu-image" src="/TeamPostype/kimari/image/gray.png">
+		</a>
+	</div>
 	</div>
 	<div id="profile">
 		<div class="navbar">
@@ -447,7 +555,7 @@ ul li{
 			</div>
 		</div>
 	</div>
-
+<div id="nav">
 	<div id="profile-nav" class="profile-nav">
 		<nav>
 			<ul class="nav nav-inline">
@@ -463,6 +571,7 @@ ul li{
 			</ul>
 		</nav>
 	</div>
+</div>
 
 <!-- POST_LIST -->
 
@@ -598,7 +707,7 @@ ul li{
 			
 		</div>
 	<div class="component-post-divider" style="margin-bottom: 200px"></div>	
-	
+
 <!--FOOTER -->
 
 <footer class="footer">
@@ -632,6 +741,6 @@ ul li{
 
 
 
-<br><br><br><br>
+<br><br><br>
 </body>
 </html>
