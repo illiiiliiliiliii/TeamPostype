@@ -159,8 +159,8 @@ main {
   font-size: 30px;
 }
 
-/* ★★★★★★★★★★★★★★★★★클릭시 빨간 하트 되기★★★★★★★★★★★★★★★★★★★ */
-/* .contents_header .bottom .right .xi-heart-o :hover {
+ /* ★★★★★★★★★★★★★★★★★클릭시 빨간 하트 되기★★★★★★★★★★★★★★★★★★★
+.contents_header .bottom .right .xi-heart-o :hover {
     cursor: pointer;
 }
 
@@ -170,9 +170,8 @@ main {
 
 .contents_header .bottom .right .fas.xi-heart-o  {
     color:var(--red-color);
-} */
-
-
+}
+ */
 
 .contents_inner {
   line-height: 3rem;
