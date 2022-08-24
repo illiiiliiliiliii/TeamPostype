@@ -2,75 +2,177 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>POSTYPE</title>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="/TeamPostype/kimsoyeon/style/noto.css"/>
+<link rel="stylesheet" href="/TeamPostype/kimsoyeon/postype.css"/>
+<link rel="icon" href="/TeamPostype/kimsoyeon/image/pavicon.png"/>
+
 <style type="text/css">
 /* header */
 
-header {
-	position:fixed;
-	width:79%;
-	background: white;
-}
 
 * {
-    padding: 0;
-    margin: 0;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0 auto;
 }
 
-body {
-	margin-left: 156px;
-	margin-right: 156px;
-}
-
-/* postype로고 글씨 크기 */
-.pst-header {
-	font-size: 20px;
-	font-weight: 700;
-	float: left;
-	margin-right : 25px;
-}
-
-.ctg-header {
-	float: left;
-	list-style-type: none; 
-}
-
-/* 카테고리 클릭시 나오는 메뉴의 밑줄 삭제 */
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-/* 카테고리 체크박스 제거 */
-input {
+.header{
     position: fixed;
-    left: -9999px;
+     top: 0;
+   width: 1900px;
+   height: 60px;
+   align-items: center;
+   background-color: #fff;
 }
 
-/* 카테고리 클릭시 반응, 글씨의 크기, 색  */
-label {
-	font-size: 13px;
-    cursor: pointer;
-    color: black;
+.head1 {
+    background-color: transparent; 
+    width: 1900px;
+    height: 60px;
+    margin: 0 auto;
 }
 
-/* 카테고리 클릭시 나오는 메뉴 */
-.sub-menu {
-    display:none;
-    padding: 3px;
-    font-size: 12px;
-    font-weight: nomal;
-    list-style-type: none;
+.postype-logo {
+    font-size: 23px;
+    font-weight: bolder;
+    margin-top: 5px;
+    margin-left: 220px;
+    display: inline;
+    float: left;
+    line-height:50px;
+    font-family: ns-bold;
+}
+.category {
+    width: 100px;
+    height: 50px;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-left: 20px;
+    display: inline;
+    float: left;
 }
 
-.web-header {
-	font-weight: 500;
-	font-size: 20px;
+.category>.category-logo{
+    display: inline;
+    float: left;
+    line-height:50px;
+    font-family: ns-thin;
+    font-size: 17px;
 }
 
-/* 카테고리 클릭시 메뉴 세로 정렬 */
-#category-menu:checked ~ .sub-menu {
-    display: block;
+.category>.material-symbols-outlined{
+    display: inline;
+    float: left;
+    line-height:60px;
+    text-decoration: none;
+}
+.searchbox{
+    width: 200px;
+    height:40px;
+    display: inline;
+    padding: 0;
+    margin-top: 5px;
+}
+
+
+.searchbox>input[name=searchbox]{
+    padding: 0;
+    width: 260px;
+    height: 32px;
+    margin-top: 17px;
+    margin-left: 400px;
+    font-family: ns-thin;
+	background-image: url(/TeamPostype/kimsoyeon/image/search.png);
+    background-repeat: no-repeat;
+    background-position: 5% 7px;
+    border: 1px solid gainsboro;
+    background-size: 15px;
+    padding-left: 40px;
+    border-radius: 160px;
+    background-color: rgb(244, 243, 243);
+}
+
+.cleakbox{
+    width: 120px;
+    height: 50px;
+    display: inline;
+    float: right;
+    margin-top: 20px;
+    margin-right: 650px;
+    margin-bottom: 10px;
+}
+
+.head2 {
+    width: 1900px;
+    height: 50px;
+    margin: 0 auto;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.webtoon{
+    width: 50px;
+    height: 50px;
+    display: inline;
+    float: left;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: ns-m;
+    margin-left: 215px;
+    text-align: center;
+}
+
+.HRN> div{
+    width: 50px;
+    height: 50px;
+    display: inline;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.HRN>.tab1{
+    width: 50px;
+    height: 50px;
+    margin-left: 420px;
+    border-bottom: 3px solid black;
+}
+
+.HRN>.tab2{
+    width: 60px;
+    height: 50px;
+}
+
+.HRN>.tab3{
+    width: 60px;
+    height: 50px;
+}
+
+ul {
+   float: left;
+   text-decoration-line: none;
+   text-color: black;
+   font-family: Malgun Gothic;
+}
+
+h {
+   font-family: Malgun Gothic;
 }
 
 /* 웹소설 페이지의 외부 메뉴의 가운데 정렬과·제거 */
@@ -93,6 +195,7 @@ label {
 	background-color: #bfbfbf;
 	background-size: 250px 200px;
 	height: 145px;
+	width: 1500px;
 }
 
 /* 탑 배너의 글씨 */
@@ -151,6 +254,7 @@ a {
 /* 소설책 목록을 감싸는 중간 박스 */
 .webnovle-list {
   	display: inline-block;
+  	margin-left: 350px;
 }
 
 /* 소설책 하나에 대한 박스 */
@@ -220,6 +324,7 @@ a {
 
 /* 페이지 넘김 */
 .page-box {
+	margin-left: 655px;
 	text-align: center;
 	list-style-type: none;
 	padding-bottom: 45px;
@@ -309,40 +414,49 @@ a {
 
 <!-- header -->
 <header>
-<div class="top-header"> <!-- 맨 위 상단바 -->
-	<span class="pst-header"><a href="#">POSTYPE</a></span>
-    	<div>
-		    <ul>
-		        <li class="ctg-header"> <!-- 카테고리 메뉴 -->
-		            <input type="checkbox" id="category-menu">	
-		            <label for="category-menu" class="labelBtn" onclick="">카테고리</label>
-		            <ul class="sub-menu">	
-		                <li><a href="#">웹툰</a></li>
-		                <li><a href="#">웹소설</a></li>
-		                <li><a href="#">지식·에세이</a></li>
-		                <li><a href="#">창작소재</a></li>
-		                <li><a href="#">시각예술</a></li>
-		                <li><a href="#">클래스</a></li>
-		                <li><a href="#">팬창작</a></li>
-		                <li><a href="#">포스타입 오리지널</a></li>
-		            </ul>
-		        </li>
-		    </ul>
-   	 </div>
-   	<br><br>
-	<hr>
+  <!-- Header -->
+    <div class="header">
     
-	<!-- 웹소설 페이지의 외부 메뉴 -->
-	<a class= "web-header">웹소설</a>
-	<div id="menu">
-		<ul class="out-menu">
-			<li class="out-menu1"><a href="#">홈</a></li>
-			<li class="out-menu2"><a href="#">랭킹</a></li>
-			<li class="out-menu3"><a href="#">최신</a></li>
-		</ul>
-	</div>
-	
-	<br>
+       <!-- head1 -->
+        <div class="head1">
+            <div class="logo">
+                <a class="postype-logo" href="/TeamPostype/2zo/postype_feed_end.html">POSTYPE</a>
+            </div>
+
+            <div class="category">
+                <a class="category-logo">카테고리</a>
+                <a class="material-symbols-outlined" href="#">expand_more</a>
+            </div>
+
+            <div class="searchbox">
+                <input type="text" name="searchbox" placeholder="포스트, 시리즈, 채널 검색" >
+            </div>
+            <div class="cleakbox">
+                <b><span class="material-symbols-outlined"; a href="#";>mail</span>
+                <span class="material-symbols-outlined"; a href="#";>notifications</span>
+                <span class="material-symbols-outlined"; a href="#";>account_circle</span>
+            </div>
+        </div>
+
+        <!-- head2 -->
+        <div class="head2">
+            <div class="webtoon"><b>웹툰</b></div>
+            <div class="HRN">
+                <div class="tab1">
+                    <a href="#">홈</a>
+                </div>
+                <div class="tab2">
+                    <a href="#">랭킹</a>
+                </div>
+                <div class="tab3">
+                    <a href="#">최신</a>
+                </div>
+                
+            </div>
+        </div>
+        
+
+
 </div>
 </header>
 
@@ -360,29 +474,22 @@ a {
 	
 	<!-- 웹소설 페이지의 내부 메뉴 - >외부 메뉴와 동작이 같다 -->
 	<div id="menu">
-		<ul class="in-menu">
-			<li class="in-menu1"><a href="#">전체</a></li>
-			<li class="in-menu2"><a href="#">BL</a></li>
-			<li class="in-menu3"><a href="#">GL</a></li>
-			<li class="in-menu4"><a href="#">로맨스</a></li>
-			<li class="in-menu5"><a href="#">고전</a></li>
-			<li class="in-menu6"><a href="#">판타지</a></li>
-			<li class="in-menu7"><a href="#">학원</a></li>
-			<li class="in-menu8"><a href="#">일상</a></li>
-			<li class="in-menu9"><a href="#">호러</a></li>
-		</ul>
+		<div class="in-menu">
+			<a class="in-menu1" href="#">전체</a>
+			<a class="in-menu2" href="#">BL</a>
+			<a class="in-menu3" href="#">GL</a>
+			<a class="in-menu4" href="#">로맨스</a>
+			<a class="in-menu5" href="#">고전</a>
+			<a class="in-menu6" href="#">판타지</a>
+			<a class="in-menu7" href="#">학원</a>
+			<a class="in-menu8" href="#">일상</a>
+			<a class="in-menu9" href="#">호러</a>
+		</div>
 	</div>
 	
-<br>
-<hr>
-<br>
-
-	<!-- 미들 배너 -->
-	<div id="middle-banner">
-		<a href="#"><img src="/TeamPostype/kimjinhui/img/gray.png" width="600" height="130"></a>
-	</div>
-	
-<br>
+	<br>
+	<br>
+	<br>
 
 <!-- 랭킹 집계 시간 -->
 <div class="ranking-time">
@@ -710,6 +817,11 @@ a {
 		<span class="guide">포스타입은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 포스타입은 콘텐츠, 거래정보 및 거래에 대하여 책임을 지지 않습니다.</span>
 	</div>	
 </footer>
+
+
+<br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<script src="/TeamPostype/3jo/postype.js"></script>
 
 </body>
 </html>
