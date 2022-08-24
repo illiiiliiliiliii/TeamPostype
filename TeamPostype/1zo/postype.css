@@ -1,23 +1,25 @@
+@charset "UTF-8";
+
 /* Header1 CSS */
 .header{
-    position: fixed;
-    margin: 0 auto;
-    left:0;
-    right: 0;
-    padding: 0;
-    background-color: white;
+	position: fixed;
+  	top: 0;
+	width: 1900px;
+	height: 60px;
+	align-items: center;
+	background-color: #fff;
 }
 
 .head1 {
     background-color: transparent; 
-    width:800px;
+    width:1000px;
     height:50px;
     margin: 0 auto;
 
 }
 
 .postype-logo {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bolder;
     margin-left: 10px;
     display: inline;
@@ -27,9 +29,10 @@
 }
 .category {
     width: 100px;
-    height: 30px;
-    font-size: 10px;
-    margin-left: 15px;
+    height: 50px;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-left: 20px;
     display: inline;
     float: left;
 }
@@ -45,20 +48,22 @@
 .category>.material-symbols-outlined{
     display: inline;
     float: left;
-    line-height:50px;
+    line-height: 50px;
     text-decoration: none;
 }
+
 .searchbox{
+	display: inline;
+	margin: auto 0;
     width: 200px;
-    height:40px;
-    display: inline;
+    height: 40px;
     padding: 0;
     margin: 0;
 }
 
 
 .searchbox>input[name=searchbox]{
-    padding: 0;
+	padding: 0;
     width: 200px;
     height: 20px;
     margin-top: 15px;
@@ -69,17 +74,18 @@
     background-position: 2% 3px;
     border: 1px solid gainsboro;
     background-size: 15px;
-    padding-left: 30px;
+    padding-left: 20px;
     border-radius: 10px;
     background-color: rgb(244, 243, 243);
+   
 }
 
 .cleakbox{
-    width: 100px;
-    height: 30px;
+    width: 85px;
+    height: 50px;
     display: inline;
     float: right;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .head2 {
@@ -212,55 +218,12 @@ img {
     margin-left: 325px;
 }
 
-.content {
-	padding-top: 120px;
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-bottom: 30px;	
-}
-
-/* slider box style */
-#sliderbox {
-	width: 600px;
-	height: 618px;
-	border: none;
-
-	/* 외부 정렬 */
-	margin: 0 auto;
-
-	/* div영역을 벗어난 부분 안보이도록 처리 */
- 	overflow: hidden;
-/* 	overflow: visible; */
-}
-
-
-#slider {
-	/* ul태그의 기본 스타일 제거 */
-	padding-top: 120;
-	margin: 0;
-	list-style-type: none;
-	
-	/* 자식요소 absolute를 받은 li태그의 기준점으로 설정하기 */
-	position: relative;	
-}
-
-#slider li {
-	position: absolute;
-}
-
-#slider li img {
-	width: 400px;
-	height: 600px;
-	margin: auto 0;
-	margin-left: 95px;
-	
-}
-
-
 /* FOOTER_STYLE */
+
+
 .footer {
    display: flex;
-     flex-direction: column;
+   flex-direction: column;
    padding: 24px 0 25px;
    text-align: center;
    color: #909090;
@@ -320,6 +283,51 @@ img {
    -webkit-font-smoothing: antialiased;
    color: #b4b4b4;
 }
+
+.content {
+	padding-top: 120px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 30px;	
+	
+	
+}
+
+#sliderbox {
+	width: 500px;
+	height: 600px;
+	border: none;
+
+	/* 외부 정렬 */
+	margin: 0 auto;
+
+	/* div영역을 벗어난 부분 안보이도록 처리 */
+ 	overflow: hidden;
+/* 	overflow: visible; */
+}
+
+#slider {
+	/* ul태그의 기본 스타일 제거 */
+	padding-top: 120;
+	margin: 0;
+	list-style-type: none;
+	
+	/* 자식요소 absolute를 받은 li태그의 기준점으로 설정하기 */
+	position: relative;	
+}
+
+#slider li {
+	position: absolute;
+}
+
+#slider li img {
+	width: 400px;
+	height: 600px;
+	margin: auto 0;
+	margin-left: 95px;
+	
+}
+
 
 
 
