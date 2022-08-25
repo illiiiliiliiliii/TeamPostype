@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>포스타입님의 포스타입 프로필</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style type="text/css">
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0 auto;
+}
+
+/* HEAD_STYLE */
+
+.header {
+	position: fixed;
+  	top: 0;
+	width: 1905px;
+	height: 60px;
+	align-items: center;
+	background-color: #fff;
+}
+
+.category {
+	display: flex;
+	align-items: center;
+		
+}
+
+.logo-box {
+	width: 1052px;
+	height: 60px;
+	line-height: 60px;
+	font-family: Arial;
+	font-weight: 600;
+	font-size: 23px;
+	margin-left: 220px;
+}
+
+.logo-box > a {
+	text-decoration-line: none;
+	color: black;
+}
+
+#profile {
+    box-shadow: 0 1px rgba(0,0,0,.05);
+    position: fixed;
+    background-color: #fff;
+    right: 0px;
+    left: 0px;
+}
+
+.navbar {
+	width: 1000px;
+	height: 48px;
+	margin: 0px 186.5px;
+	align-items: center;
+	display: flex;
+	padding-right: 20px;
+    padding-left: 20px;
+	
+}
+
+.navbar-left {
+	margin-left: 23px;
+}
+
+.navbar-center {
+	text-align: center;
+    margin-right: 400px;
+    margin-left: 385px;
+}
+
+.navbar-right {
+	margin-right: -40px;
+}
+
+.nav-btn> a {
+	color: #000;
+}
+
+.nav-btn > a:hover {
+  	color : #007bff;
+}
+
+
+/* PROFILE_STYLE */
+
+
+.profile-body {
+	padding: 60px 100px 48px 100px;
+	text-align: center!important;
+	margin: 100px 100px 0px 100px;
+}
+
+.profile-user {
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #CAC7C7;
+    margin-bottom: 20px;
+    width: 96px;
+    height: 96px;
+}
+
+.profile-title {
+	font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.small {
+	font-size: 16px;
+    line-height: 20px;
+    color: #909090;
+}
+
+.message-btn {
+	margin-top: 26px!important;
+ 	width: 800px;
+ 	height: 40px;
+}
+
+.btn-send-message {
+    background-color: #fff;
+    border-color: #ccc;
+    font-size: 15px;
+    border-radius: 4px;
+    border-width: 1px;
+    align-items: center;
+    padding: 10px 15px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.btn-send-message:hover {
+	color: #3478FF;  
+	border-color: #3478FF; 
+}
+
+.material-icons {
+	font-size: 18px; 
+}
+
+.text {
+	margin-left: 3px;
+}
+
+.profile-nav {
+	width: 1000px;
+	height: 35px;
+    border-bottom: 0.5px solid rgba(0,0,0,.1);
+    background-color: #fff;
+}
+
+
+.nav-item {
+	width: 60px;
+	height: 56px;
+}
+
+.nav-item > a {
+    font-size: 17px;
+    text-decoration-line: none;
+    color: black;
+    border-bottom-width: 2px;
+}
+
+.nav-item > a:not(:hover) {
+ 	opacity: .6;
+}
+
+ul li{
+   list-style:none;
+   display: inline;
+   padding: 10px 10px 10px 10px;
+   font-weight: bold;
+}
+
+
+/* POST_STYLE */
+
+
+.post-list {
+	padding: 24px 12px; 
+}
+
+.post-list {
+
+    width: 100%;
+    width: 1000px;
+    height: 183.49px;
+}
+
+.post-list > div > a{
+    text-decoration-line: none;
+}
+
+.post-data-1 {
+    height: 25.9px;
+}
+
+.post-data-2 {
+	float: left;
+	width: 800px;
+	margin-bottom: 27px;
+	margin-bottom: 0px;
+}
+
+.post-data-3 {
+	float: right;
+	width: 145px;
+}
+
+.post-data-4 {
+    align-items: center;
+	margin-top: 15px;
+	display: flex;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.series {
+	color: rgba(0,0,0,.54)!important;
+	margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    height: 25.9px;
+    line-height: 18.9px;
+    margin-bottom: 6px;
+    text-size-adjust: 100%;
+}
+
+.post-title {
+	color: #000!important;
+	margin-bottom: 7px;
+    font-size: 20px;
+    line-height: 27px;
+    width: 472px;
+    height: 27px;
+    font-weight: 600;
+}
+
+.post-info {
+	color: rgba(0,0,0,.47)!important;
+	display: inline;
+	margin-bottom: 7px;
+    font-size: 15px;
+    line-height: 32.3px;
+    width: 472px;
+    height: 20.8px;
+    font-weight: 400;
+}
+
+.post-tags > a {
+    text-decoration-line: none;  
+    color: rgba(0,0,0,.47);
+}
+
+.post-tags > a:hover {
+    color: rgba(0,0,0,.47);   
+}
+
+.post-tags {
+    display: inline-block;
+	font-size: 13px;
+    line-height: 16px;
+	color: rgba(0,0,0,.47);
+	background: rgba(0,0,0,.05);
+    padding: 2px 6px;
+    border-radius: 3px;
+    
+}
+
+.post-image {
+    margin-left: 24px;
+    width: 144px;
+    height: 108px; 
+    float: right;
+}
+
+#image {
+	width: 144px;
+    height: 108px;
+    border-radius: 8px;
+}
+
+.profile {
+	float: left;
+	margin-left: 0px;
+}
+
+#profile-image {
+	border-radius: 50%;
+	width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.user {
+	width: 506px;
+    height: 15px;
+   	font-size: 13px;
+   	margin-top: 15px;
+}
+
+.user > a {
+    text-decoration-line: none;
+    color: #000;  
+}
+
+.component-post-divider {
+	width: 1000px;
+	display: flex;
+	justify-content: center;
+	height: 1px;
+	background: rgba(0,0,0,.05);
+}
+
+/* FOOTER_STYLE */
+
+
+.footer {
+	display: flex;
+  	flex-direction: column;
+	padding: 24px 0 25px;
+	text-align: center;
+	color: #909090;
+	border-top: 1px solid rgba(0,0,0,.05);
+	width: 1425px;
+	height: 100px;
+}
+
+.list-inline > a:hover {
+  color : #007bff;
+}
+
+.list-inline-item {
+	text-decoration: none;
+	font-size: 12px;
+	color: rgb(144, 144, 144);
+	width: 55px;
+	height: 20px;
+	border-right: 1px solid rgba(0,0,0,.1);
+	padding-right: 5px;
+}
+
+.list-inline-item-none {
+	text-decoration: none;
+	font-size: 12px;
+	color: rgb(144, 144, 144);
+	margin-right: 20px;
+}
+
+.list-inline-item-copyright {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500px;
+	color: rgb(144, 144, 144);
+}
+
+.footer address > span {
+	font-size: 12px;
+	font-style: normal;
+	max-width: 640px;
+	margin: 20px auto 0;
+	text-align: center;
+	word-break: keep-all;
+	-webkit-font-smoothing: antialiased;
+	color: #b4b4b4;
+}
+
+.footer address .info {
+	border-right: 1px solid rgba(0,0,0,.1);
+	padding-right: 7px;
+}
+
+.footer .guide {
+	font-size: 12px;
+	text-align: center;
+	word-break: keep-all;
+	-webkit-font-smoothing: antialiased;
+	color: #b4b4b4;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+	<div class="category"> 
+		<div class="logo-box">
+			<a href="http://www.postype.coom">
+				<span id="logo">POSTYPE</span>
+			</a>
+		</div>
+	</div>
+	<div id="profile">
+		<div class="navbar">
+			<div class="navbar-left">
+				<div class="nav-btn">
+					<a id="back-btn" href="javascript:history.go(-1);" aria-label="뒤로" title="뒤로">
+						<span class="material-icons">arrow_back_ios</span>
+					</a>
+				</div>
+			</div>
+			<div class="navbar-center">
+				<span>포스타입</span>
+			</div>
+			<div class="navbar-right">
+				<div class="nav-btn">
+					<a id="profile-options" href="#" data-toggle="dropdown" aria-expanded="false" aria-label="더보기" title="더보기">
+						<span class="material-icons">more_horiz</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- PROFILE_CONTENT -->
+
+
+<div class="profile"></div>
+	<div class="profile-content">
+		<div class="profile-body">
+			<div class="profile-user">
+				<img class="profile-img" alt="포스타입" src="/TeamPostype/kimari/image/gray.png">
+			</div>
+				<h5 class="profile-title">포스타입</h5>
+			<div class="small">모든 창작자를 위한 콘텐츠 오픈마켓, 포스타입</div>
+			<div class="message-btn">
+				<button type="button" class="btn-send-message">
+					<span class="material-icons">mail_outline</span>
+					&nbsp;
+					<span class="text">메시지 쓰기</span>
+				</button>			
+			</div>
+		</div>
+	</div>
+
+	<div id="profile-nav" class="profile-nav">
+		<nav>
+			<ul class="nav nav-inline">
+				<li class="nav-item">
+					<a class="nav-link" href="#">채널</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-post" href="#">포스트</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">시리즈</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+<!-- POST_LIST -->
+
+
+<div class="post-list">
+	<div class="post-data-1">
+		<a class="series" href="https://www.google.co.kr/">EVENT</a>
+	</div>
+	<div class="post-data-2">
+		<a class="post-title" href="https://www.google.co.kr/">천계영 작가 x 포스타입 특별 강연</a><br>
+		<a class="post-info" href="https://www.google.co.kr/">참가 신청 : 2022년 8월 15일까지 ㅣ 강연 일정 : 8월 24일 오후 2~6시 </a><br>
+		<div class="post-tags">
+			<a href="https://www.google.co.kr/">프로모션</a>
+		</div>
+	</div>
+	<div class="post-data-3">
+		<div class="post-image">
+			<a href="https://www.google.co.kr/">
+				<img id="image" alt="post-image" src="/TeamPostype/kimari/image/gray.png">
+			</a>
+		</div>
+	</div>
+	<br>
+	<div class="post-data-4">
+		<div class="profile">
+			<a href="https://www.google.co.kr/">
+				<img id="profile-image" alt="profile-image" src="/TeamPostype/kimari/image/gray.png">
+			</a>
+		</div>
+		<div class="profile">
+			<div class="user" style="margin-top: 0px;">
+				<a href="https://www.google.co.kr/">포스타입</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="component-post-divider"></div>	
+
+
+<!-- --------------------------------------------------------------- -->
+
+	<div class="post-list">
+			<div class="post-data-1">
+				<a class="series" href="https://www.google.co.kr/">EVENT</a>
+			</div>
+			<div class="post-data-2">
+				<a class="post-title" href="https://www.google.co.kr/">오리지널 작품 구매/후원하고, 500 포인트 받아가세요! 💰</a><br>
+				<a class="post-info" href="https://www.google.co.kr/">포스타입 작가 ❤️ 독자 감사 이벤트(2)의 일환으로 진행됩니다.| 포스타입 오리지널의 아무 작품, 아무 회차나 1회 이상 구매 또는 후원 ❤️‍🔥하고, 오리지널 채널을 구독🎯해주세요! </a><br>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">포스타입</a>
+				</div>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">이벤트</a>
+				</div>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">웹툰</a>
+				</div>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">웹소설</a>
+				</div>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">오디오</a>
+				</div>
+			</div>
+			<div class="post-data-3">
+				<div class="post-image">
+					<a href="https://www.google.co.kr/">
+						<img id="image" alt="post-image" src="/TeamPostype/kimari/image/gray.png">
+					</a>
+				</div>
+			</div>
+			<br>
+			<div class="post-data-4">
+				<div class="profile">
+				<a href="https://www.google.co.kr/">
+					<img id="profile-image" alt="profile-image" src="/TeamPostype/kimari/image/gray.png">
+				</a>
+				</div>
+				<div class="profile">
+					<div class="user" style="margin-top: 0px;">
+						<a href="https://www.google.co.kr/">포스타입</a>
+					</div>
+			
+				</div>
+			</div>
+			
+		</div>
+	<div class="component-post-divider"></div>	
+	
+	<div class="post-list">
+			<div class="post-data-1">
+				<a class="series" href="https://www.google.co.kr/">EVENT</a>
+			</div>
+			<div class="post-data-2">
+				<a class="post-title" href="https://www.google.co.kr/">[종료]오리지널 작품에 댓글 달고, 포인트 받아가세요!💌</a><br>
+				<a class="post-info" href="https://www.google.co.kr/">포스타입 작가❤️ 독자 감사 이벤트(1)의 일환으로 진행됩니다. | 포스타입 오리지널 작품에 댓글☁️(100자 이상, 공백 포함)을 작성하고, 오리지널 채널을 구독💘해주세요!</a><br>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">프로모션</a>
+				</div>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">웹툰</a>
+				</div>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">웹소설</a>
+				</div>
+				<div class="post-tags">
+					<a href="https://www.google.co.kr/">이벤트</a>
+				</div>
+			</div>
+			<div class="post-data-3">
+				<div class="post-image">
+					<a href="https://www.google.co.kr/">
+						<img id="image" alt="post-image" src="/TeamPostype/kimari/image/gray.png">
+					</a>
+				</div>
+			</div>
+			<br>
+			<div class="post-data-4">
+				<div class="profile">
+				<a href="https://www.google.co.kr/">
+					<img id="profile-image" alt="profile-image" src="/TeamPostype/kimari/image/gray.png">
+				</a>
+				</div>
+				<div class="profile">
+					<div class="user" style="margin-top: 0px;">
+						<a href="https://www.google.co.kr/">포스타입</a>
+					</div>
+			
+				</div>
+			</div>
+			
+		</div>
+	<div class="component-post-divider" style="margin-bottom: 200px"></div>	
+	
+<!--FOOTER -->
+
+<footer class="footer">
+	<div class="container">
+		<div class="list-inline">
+			<a class="list-inline-item" href="#">서비스 소개</a>
+			<a class="list-inline-item" href="#">이용약관</a>
+			<a class="list-inline-item" href="#" style="font-weight: bold">개인정보처리방침</a>
+			<a class="list-inline-item" href="#">채용</a>
+			<a class="list-inline-item" href="#">도움센터</a>
+			<a class="list-inline-item" href="#">권리침해신고센터</a>
+			<a class="list-inline-item" href="#">포스타입 파트너스</a>
+			<a class="list-inline-item" href="#">공식 채널</a>
+			<a class="list-inline-item" href="#">회사 소개 · 문의</a>
+			<a class="list-inline-item-none" href="#">브랜드 리소스</a>
+			<span class="list-inline-item-copyright">&copy; POSTYPE, INC.</span>
+		</div>
+		<address style="margin-top: 20px;">
+			<span class="info">주식회사 포스타입</span>
+			<span class="info">사업자등록번호: 786-86-00336</span>
+			<span class="info">통신판매업신고번호: 2018-서울강남-02900</span>
+			<span class="info">대표자명: 신규섭</span><br>
+			<span class="info">개인정보관리 책임자: 신규섭</span>
+			<span class="info">주소: 서울시 강남구 테헤란로4길 5, 6층, 11층</span>
+			<span class="num">연락처: 02-6956-0827, 팩스: 02-6442-0128</span>
+		</address>
+		<span class="guide">포스타입은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 포스타입은 콘텐츠, 거래정보 및 거래에 대하여 책임을 지지 않습니다.</span>
+	</div>	
+</footer>
+
+
+
+
+<br><br><br><br>
+</body>
+</html>
