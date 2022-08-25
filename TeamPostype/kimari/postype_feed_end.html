@@ -2,8 +2,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>포스타입님의 포스타입 프로필</title>
+<title>포스타입 피드</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="icon" href="/TeamPostype/kimsoyeon/image/pavicon.png"/>
 
 <style type="text/css">
 
@@ -13,31 +14,38 @@
 	margin: 0 auto;
 }
 
-/* HEAD_STYLE */
+
+/* HEADER_STYLE */
+
 
 .header {
 	position: fixed;
   	top: 0;
+  	background-color: #fff;
 	width: 1900px;
 	height: 60px;
 	align-items: center;
-	background-color: #fff;
+	box-shadow: 0 1px rgba(0,0,0,.05);
 }
 
 .category {
 	display: flex;
-	align-items: center;	
+	align-items: center;
+	margin-right: 610px;
+    margin-left: 160px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .logo-box {
-	width: 108px;
+	width: 108px; 
 	height: 60px;
-	line-height: 60px;
-	font-family: Arial;
-	font-weight: 600;
-	font-size: 23px;
-	margin-left: 220px;
-	margin-right: 30px;
+	line-height: 60px; 
+	font-family: Arial; 
+	font-weight: 600; 
+	font-size: 23px; 
+	margin-left: 2px; 
+	margin-right: 30px; 
 }
 
 .logo-box > a {
@@ -67,23 +75,33 @@
     margin-right: 0px;
 }
 
-.search-form {
-	margin-right: 0px;
-	margin-left: 400px;
-	border: 1px solid rgba(0,0,0,.1);
-	background-color: rgb(250, 250, 250);
-	border-bottom-left-radius: 160px;
-	border-bottom-right-radius: 160px;
-	border-top-left-radius: 160px;
-	border-top-right-radius: 160px;
-	width: 260px;
-	height: 36px;
+.searchbox{
+    width: 200px;
+    height:40px;
+    display: inline;
+    padding: 0;
+    margin-top: 5px;
+    margin-right: 455x;
+    margin-bottom: 35px;
+    margin-left: 180px;
 }
 
-#search {
-	font-size: 22px;
-	margin-top: 4px;
-	margin-left: 8px
+
+.searchbox>input[name=searchbox]{
+    padding: 0;
+    width: 260px;
+    height: 32px;
+    margin-top: 17px;
+    margin-left: 226px;
+    font-family: ns-thin;
+   background-image: url(/TeamPostype/kimsoyeon/image/search.png);
+    background-repeat: no-repeat;
+    background-position: 5% 7px;
+    border: 1px solid gainsboro;
+    background-size: 15px;
+    padding-left: 40px;
+    border-radius: 160px;
+    background-color: rgb(244, 243, 243);
 }
 
 
@@ -95,7 +113,7 @@
 
 .profile-menu {
     margin-left: 5px;
-    margin-right: 0px;
+    margin-right: 25px;
 }
 
 #profile-menu-image {
@@ -107,275 +125,282 @@
     border-style: none;
 }
 
-#profile {
-    box-shadow: 0 1px rgba(0,0,0,.05);
-    position: fixed;
-    background-color: #fff;
-}
 
-.navbar {
-	width: 1050px;
-	height: 48px;
-	margin: 0px 186.5px;
-	align-items: center;
+/* HOME_HEAD_STYLE */
+
+
+.category-list {
 	display: flex;
-	padding-right: 50px;
-    padding-left: 20px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	background: #ffffff;
+	width: 1010px;
+	height: 340px;
+	margin-top: 90px;
+	margin-bottom: 32px;
 }
 
-.navbar-left {
-	margin-left: 23px;
+.category-list > div {
+	display: inline-block;
+	border: 1px solid #ccc;
+	width: 242.5px;
+	height: 160px;
+	background-image: url("/TeamPostype/kimari/image/gray.png");	
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	padding: 25px;
+	margin: 5px;
 }
 
-.navbar-center {
-	text-align: center;
-    margin-right: 400px;
-    margin-left: 385px;
+#webtoon {
+	background-image: url("/TeamPostype/2zo/image/웹툰.png");
+	background-size: 300px 177px;
 }
 
-.navbar-right {
-	margin-right: -40px;
+#webnovel {
+	background-image: url("/TeamPostype/2zo/image/웹소설.png");
+	background-size: 300px 177px;
 }
 
-.nav-btn> a {
-	color: #000;
-}
-
-.nav-btn > a:hover {
-  	color : #007bff;
-}
-
-
-/* PROFILE_STYLE */
-
-
-.profile-body {
-	padding: 60px 100px 48px 100px;
-	text-align: center!important;
-	margin: 100px 100px 0px 100px;
-}
-
-.profile-user {
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #CAC7C7;
-    margin-bottom: 20px;
-    width: 96px;
-    height: 96px;
-}
-
-.profile-title {
+.title {
+	font-family: Malgun Gothic;
+	font-weight: 600;
 	font-size: 22px;
-    margin-bottom: 12px;
-    font-weight: 500;
+	line-height: 23px;
 }
 
-.small {
-	font-size: 16px;
-    line-height: 20px;
-    color: #909090;
-}
-
-.message-btn {
-	margin-top: 26px!important;
- 	width: 800px;
- 	height: 40px;
-}
-
-.btn-send-message {
-    background-color: #fff;
-    border-color: #ccc;
-    font-size: 15px;
-    border-radius: 4px;
-    border-width: 1px;
-    align-items: center;
-    padding: 10px 15px;
-    display: inline-flex;
-    cursor: pointer;
-}
-
-.btn-send-message:hover {
-	color: #3478FF;  
-	border-color: #3478FF; 
-}
-
-.text {
-	margin-left: 3px;
-}
-
-.profile-nav {
-	width: 1000px;
-	height: 35px;
-    border-bottom: 0.5px solid rgba(0,0,0,.1);
-    background-color: #fff;
-}
-
-.navfixed {
-position: fixed;
-top: 0px;
-}
-
-.nav-item {
-	width: 60px;
-	height: 56px;
-}
-
-.nav-item > a {
-    font-size: 17px;
-    text-decoration-line: none;
-    color: black;
-    border-bottom-width: 2px;
-}
-
-.nav-item > a:not(:hover) {
- 	opacity: .6;
-}
-
-ul li{
-   list-style:none;
-   display: inline;
-   padding: 10px 10px 10px 10px;
-   font-weight: bold;
+.description {
+	font-family: Malgun Gothic;
+	font-weight: 400;
+	font-size: 14px;
+	margin-top: 0.3em;
+	line-height: 135%
 }
 
 
-/* POST_STYLE */
+/* HOME_BODY_STYLE */
 
-
-.post-list {
-	padding: 24px 12px; 
-}
-
-.post-list {
-	margin-bottom: 20px;
+.component-post-divider {
     width: 100%;
-    width: 1000px;
-    height: 183.49px;
+    height: 1px;
+    background: rgba(0,0,0,.05);
 }
 
-.post-list > div > a{
-    text-decoration-line: none;
+.home-body {
+	display: block;
 }
 
-.post-data-1 {
-    height: 25.9px;
+.home-body-inner {
+	width: 640px;
+	height: 42px;
+	border-radius: 8px;
+	border: 1px solid rgba(0,0,0,.1);
+	display: flex;
+	align-items: center;
 }
 
-.post-data-2 {
+.body-menu {
+	width: 215px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-right: 1px solid rgba(0,0,0,.1);
+}
+
+.body-menu:last-child {
+	border-right: none;
+}
+
+.home-body-inner > a {
+	text-decoration-line: none;
+	color: #000;
+	font-size: 15px;
+}
+
+.home-body-inner > a:hover {
+  color : #007bff;
+}
+
+.section {
+	width: 640px;
+	border-bottom: 1px solid rgba(0,0,0,.1); 
+}
+
+.section-head {
+	width: 600px;
+	height: 99px;
+	align-items: center;
+	line-height: 21px;
+	color: rgba(0, 0, 0, 0.47);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: .5rem;
+	line-height: 1.2;
+}
+
+.h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.section-head > h5 {
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.icon-wrapper {
+	display: inline-flex;
+	margin: 10px;
+}
+
+.feed-main {
+	padding-bottom: 0px;
+}
+
+.post-list {
+	width: 100%;
+	width: 640px;
+	height: 183.49px;
+	padding: 24px 12px;
+	margin-bottom: 20px;
+}
+
+.post-list > div > a {
+	text-decoration-line: none;
+}
+
+.post-data {
+	width: 472px;
 	float: left;
-	width: 800px;
-	margin-bottom: 27px;
-	margin-bottom: 0px;
 }
 
-.post-data-3 {
-	float: right;
-	width: 145px;
-}
-
-.post-data-4 {
-    align-items: center;
-	margin-top: 15px;
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
-.series {
-	color: rgba(0,0,0,.54)!important;
-	margin-bottom: 7px;
-    font-size: 14px;
-    font-weight: 400;
-    height: 25.9px;
-    line-height: 18.9px;
-    margin-bottom: 6px;
-    text-size-adjust: 100%;
-}
-
-.post-title {
-	color: #000!important;
-	margin-bottom: 7px;
-    font-size: 20px;
-    line-height: 27px;
-    width: 472px;
-    height: 27px;
-    font-weight: 600;
-}
-
-.post-info {
-	color: rgba(0,0,0,.47)!important;
-	display: inline;
-	margin-bottom: 7px;
-    font-size: 15px;
-    line-height: 32.3px;
-    width: 472px;
-    height: 20.8px;
-    font-weight: 400;
+.post-data > a {
+	text-decoration-line: none;
 }
 
 .post-tags > a {
-    text-decoration-line: none;  
-    color: rgba(0,0,0,.47);
-}
-
-.post-tags > a:hover {
-    color: rgba(0,0,0,.47);   
+	text-decoration-line: none;
+	color: #3478FF;
 }
 
 .post-tags {
-    display: inline-block;
+	display: inline-block;
 	font-size: 13px;
-    line-height: 16px;
-	color: rgba(0,0,0,.47);
-	background: rgba(0,0,0,.05);
-    padding: 2px 6px;
-    border-radius: 3px;
-    
+	line-height: 16px;
+	background: #EBF4FF;
+	padding: 2px 6px;
+	border-radius: 3px;
+}
+
+.text-color-black {
+	color: black;
+}
+
+p {
+	color: #00000078;
+	font-size: 14px;
+	margin: 0px 0px 16px;
+}
+
+.ellipsis-2 {
+	font-size: 20px;
+	color: black;
+}
+
+.ellipsis-2 > p {
+	margin-right: 20px;
+}
+
+.post-info {
+	float: left;
 }
 
 .post-image {
-    margin-left: 24px;
-    width: 144px;
-    height: 108px; 
-    float: right;
+	margin-left: 24px;
+	width: 144px;
+	height: 108px; 
+	float: right;
 }
 
 #image {
 	width: 144px;
-    height: 108px;
-    border-radius: 8px;
+	height: 108px;
+	border-radius: 8px;
 }
 
-.profile {
+.user-profile {
 	float: left;
-	margin-left: 0px;
 }
 
-#profile-image {
+#user-image{
 	border-radius: 50%;
 	width: 32px;
-    height: 32px;
-    margin-right: 10px;
-    margin-top: 15px;
+	height: 32px;
+	margin-right: 10px;
+	margin-top: 15px;
 }
 
-.user {
+.text-4 {
 	width: 506px;
-    height: 15px;
-   	font-size: 13px;
-   	margin-top: 20px;
+	height: 15px;
+	font-size: 13px;
+	margin-top: 15px;
 }
 
-.user > a {
-    text-decoration-line: none;
-    color: #000;  
+.text-4 > a {
+	text-decoration-line: none;
+	color: #000;
 }
 
 .component-post-divider {
-	width: 1000px;
+	width: 640px;
 	display: flex;
 	justify-content: center;
 	height: 1px;
 	background: rgba(0,0,0,.05);
+}
+
+
+.no-more-feed {
+	width: 540px;
+	padding-bottom: 100px;
+}
+
+.btn {
+	background-color: #fff;
+	border-radius: 4px;
+	border-width: 1px;
+	width: 125px;
+	height: 32px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	color: #3478FF;  
+	border-color: #3478FF; 
+}
+.feed-bottom {
+	padding-bottom: 32px;
+}
+
+.no-more-feed {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16.8px;
+	color: rgba(0,0,0,.47);
+	padding: 30px 20px;
+	text-align: center;
 }
 
 
@@ -446,11 +471,8 @@ ul li{
 }
 
 
-
 </style>
-
 </head>
-
 <body>
 
 <!-- HEADER -->
@@ -470,13 +492,9 @@ ul li{
 			<div class="dropdown-menu">
 			</div>
 		</div>
-		<div class="search-form">
-			<form class="search" id="search" action="/search">
-				<div class="inner">
-					<span class="material-icons" id="search">search</span>
-				</div>
-			</form>
-		</div>
+		<div class="searchbox">
+              <input type="text" name="searchbox" placeholder="포스트, 시리즈, 채널 검색" >
+        </div>
 		<div class="m-nav">
 			<button class="messages" id="messages" type="button" aria-label="메시지">
 				<span class="material-icons">mail_outline</span>
@@ -486,205 +504,233 @@ ul li{
 		</button>
 	</div>
 	<div class="profile-menu">
-		<a href="#">
+		<a href="/TeamPostype/2zo/postype_profile_2.html">
 			<img id="profile-menu-image" alt="profile-menu-image" src="/TeamPostype/1zo/image/pavicon.png">
 		</a>
 	</div>
 	</div>
-	<div id="profile">
-		<div class="navbar">
-			<div class="navbar-left">
-				<div class="nav-btn">
-					<a id="back-btn" href="javascript:history.go(-1);" aria-label="뒤로" title="뒤로">
-						<span class="material-icons">arrow_back_ios</span>
+</div>
+
+
+<!-- HOME_HEAD -->
+
+<div class="home-head">
+	<div class="category-list">
+		<div id="webtoon" style="cursor: pointer" onclick="location.href='/TeamPostype/1zo/Project_main.html';">
+			<div class="title">웹툰</div>
+				<div class="description">
+					<span>
+						BL, GL, 로맨스,
+						<br>
+					</span>
+					<span>드라마, 판타지</span>
+				</div>
+		</div>
+		<div id="webnovel" style="cursor: pointer;" onclick="location.href='/TeamPostype/3jo/page5.html';">
+			<div class="title">웹소설</div>
+				<div class="description">
+					<span>
+						BL, GL, 로맨스,
+						<br>
+					</span>
+					<span>고전, 판타지</span>
+				</div>
+		</div>
+		<div id="knowledge-essay" style="cursor: pointer;" onclick="location.href='#';">
+			<div class="title">지식·에세이</div>
+				<div class="description">
+					<span>
+						지식, 문화,
+						<br>
+					</span>
+					<span>에세이, 시</span>
+				</div>
+		</div>
+		<div id="resource" style="cursor: pointer;" onclick="location.href='#';">
+			<div class="title">창작소재</div>
+				<div class="description">
+					<span>
+						클립스튜디오,
+						<br>
+					</span>
+					<span>굿노트, 스케치업</span>
+				</div>
+		</div>
+			<div id="visual-art" style="cursor: pointer;" onclick="location.href='#';">
+			<div class="title">시각예술</div>
+				<div class="description">
+					<span>
+						일러스트, 사진,
+						<br>
+					</span>
+					<span>동영상</span>
+				</div>
+		</div>
+		<div id="class" style="cursor: pointer;" onclick="location.href='#';">
+			<div class="title">클래스</div>
+				<div class="description">
+					<span>
+						글쓰기, 드로잉,
+						<br>
+					</span>
+					<span>공예, 디자인</span>
+				</div>
+		</div>
+		<div id="fanwork" style="cursor: pointer;" onclick="location.href='#';">
+			<div class="title">팬창작</div>
+		</div>
+		<div id="original" style="cursor: pointer;" onclick="location.href='#';">
+			<div class="title">오리지널</div>
+				<div class="description">
+					<span>
+					웹툰, 웹소설
+						<br>
+					</span>
+					<span>독점 연재작</span>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- HOME_BODY -->
+
+<div class="home-body"></div>
+	<div class="home-body-inner">
+		<a class="body-menu" href="#">컬렉션</a>
+		<a class="body-menu" href="#">파트너스</a>	
+		<a class="body-menu" href="#">이벤트</a>	
+	</div>
+	<div class="section">
+		<div class="section-head">
+			<h4>아직 구독한 채널이 없어요.</h4>
+			<h5>포스타입 추천 작품을 둘러보고 마음에 드는 채널을 구독해보세요.</h5>
+			<div class="icon-wrapper">
+				<img alt="icon" src="https://d33pksfia2a94m.cloudfront.net/assets/img/icon/angle-down-gray.svg">
+			</div>
+		</div>
+	</div>
+	<div class="feed-main">
+		<div class="post-list">
+			<div>
+				<div class="post">
+					<div class="post-data">
+						<a href="/TeamPostype/3jo/page3.html">
+							<h3 class="ellipsis-2 text-color-black">보건교사 안은영 1화</h3>
+							<div class="ellipsis-2 text-alpha-black-47">
+								<p>나의 슬픔과 괴롬과 있는 대로의 지혜를 일점에 응집시켜 그의 눈 속을 응시하지 않을 수 없다.<p>
+							</div>
+						</a>
+						<div class="post-tags">
+							<a href="/TeamPostype/3jo/page3.html">프로모션</a>
+						</div>
+					</div>
+					<div class="post-data-thumbnail">
+						<a href="/TeamPostype/3jo/page3.html">
+							<img id="image" alt="post-image" src = "/TeamPostype/3jo/A.gif" alt="1~2화">
+						</a>
+					</div>
+				</div>
+				<div class="post-info">
+					<a class="user-profile" href="/TeamPostype/2zo/postype_profile_2.html">
+						<img id="user-image" alt="user-image" src = "/TeamPostype/1zo/image/pavicon.png" alt="포스트타입">
 					</a>
+					<div class="post-info-body">
+						<div class="text-4">
+							<a href="/TeamPostype/2zo/postype_profile_2.html" rel="author">포스트타입</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="navbar-center">
-				<span>포스타입</span>
-			</div>
-			<div class="navbar-right">
-				<div class="nav-btn">
-					<a id="profile-options" href="#" data-toggle="dropdown" aria-expanded="false" aria-label="더보기" title="더보기">
-						<span class="material-icons">more_horiz</span>
+		</div>
+		
+		<div class="component-post-divider"></div>
+		
+		<div class="post-list">
+			<div>
+				<div class="post">
+					<div class="post-data">
+						<a href="#">
+							<h3 class="ellipsis-2 text-color-black">요정이야기</h3>
+							<div class="ellipsis-2 text-alpha-black-47">
+								<p>20살, 대학1학년, 나는 아이를 가졌다. 세상의 모든 '요정'을 위해 꺼내 놓은 요정의 이야기.<p>
+							</div>
+						</a>
+						<div class="post-tags">
+							<a href="#">프로모션</a>
+						</div>
+					</div>
+					<div class="post-data-thumbnail">
+						<a href="#">
+							<img id="image" alt="post-image" src = "/TeamPostype/2zo/image/gray.png" alt="1~5화">
+						</a>
+					</div>
+				</div>
+				<div class="post-info">
+					<a class="user-profile" href="#">
+						<img id="user-image" alt="user-image" src = "/TeamPostype/2zo/image/gray.png" alt="기럭지미인">
 					</a>
+					<div class="post-info-body">
+						<div class="text-4">
+							<a href="#" rel="author">요정</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-
-<!-- PROFILE_CONTENT -->
-
-
-<div class="profile"></div>
-	<div class="profile-content">
-		<div class="profile-body">
-			<div class="profile-user">
-				<img class="profile-img" alt="포스타입" src="/TeamPostype/1zo/image/pavicon.png">
+		
+		<div class="component-post-divider"></div>
+		
+		<div class="post-list">
+			<div>
+				<div class="post">
+					<div class="post-data">
+						<a href="#">
+							<h3 class="ellipsis-2 text-color-black">소화진이 좀 이상해 보이는 건 기분 탓이겠지</h3>
+							<div class="ellipsis-2 text-alpha-black-47">
+								<p>왜 내 소환수만 인간이 된 거지?🧐 조금 특이한 소환수를 얻은 마법사의 이야기🧙<p>
+							</div>
+						</a>
+						<div class="post-tags">
+							<a href="#">프로모션</a>
+						</div>
+					</div>
+					<div class="post-data-thumbnail">
+						<a href="#">
+							<img id="image" alt="post-image" src = "/TeamPostype/2zo/image/gray.png" alt="1~5화">
+						</a>
+					</div>
+				</div>
+				<div class="post-info">
+					<a class="user-profile" href="#">
+						<img id="user-image" alt="user-image" src = "/TeamPostype/2zo/image/gray.png" alt="기럭지미인">
+					</a>
+					<div class="post-info-body">
+						<div class="text-4">
+							<a href="#" rel="author">기럭지미인</a>
+						</div>
+					</div>
+				</div>
 			</div>
-				<h5 class="profile-title">포스타입</h5>
-			<div class="small">모든 창작자를 위한 콘텐츠 오픈마켓, 포스타입</div>
-			<div class="message-btn">
-				<button type="button" class="btn-send-message">
-					<span class="material-icons">mail_outline</span>
-					&nbsp;
-					<span class="text">메시지 쓰기</span>
-				</button>			
-			</div>
 		</div>
-	</div>
-<div id="nav">
-	<div id="profile-nav" class="profile-nav">
-		<nav>
-			<ul class="nav nav-inline">
-				<li class="nav-item">
-					<a class="nav-link" href="#">채널</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-post" href="#">포스트</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">시리즈</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-</div>
 
-<!-- POST_LIST -->
-
-
-<div class="post-list">
-	<div class="post-data-1">
-		<a class="series" href="#">BEST</a>
+		<div class="component-post-divider"></div>
+		
 	</div>
-	<div class="post-data-2">
-		<a class="post-title" href="/TeamPostype/3jo/page3.html">보건교사 안은영 1화</a><br>
-		<a class="post-info" href="/TeamPostype/3jo/page3.html">나의 슬픔과 괴롬과 있는 대로의 지혜를 일점에 응집시켜 그의 눈 속을 응시하지 않을 수 없다.</a><br>
-		<div class="post-tags">
-			<a href="#">프로모션</a>
-		</div>
-	</div>
-	<div class="post-data-3">
-		<div class="post-image">
-			<a href="/TeamPostype/3jo/page3.html">
-				<img id="image" alt="post-image" src="/TeamPostype/3jo/A.gif">
-			</a>
+	
+	<div class="feed-bottom">
+		<div class="no-more-feed">
+			<p style="margin-bottom: 0px;">추천 작품을 모두 둘러봤습니다.</p>
+			<p>포스타입의 다른 작품들을 더 살펴볼까요?</p>
+			<a class="btn-href" href="#">
+				<button type="button" class="btn">
+					<span class="text">컬렉션 둘러보기</span>
+				</button>
+			</a>	
 		</div>
 	</div>
-	<br>
-	<div class="post-data-4">
-		<div class="profile">
-			<a href="#">
-				<img id="profile-image" alt="profile-image" src="/TeamPostype/1zo/image/pavicon.png">
-			</a>
-		</div>
-		<div class="profile">
-			<div class="user">
-				<a href="#">포스타입</a>
-			</div>
-			
-		</div>
-	</div>
-</div>
-
-<div class="component-post-divider"></div>	
-
-<div class="post-list">
-	<div class="post-data-1">
-		<a class="series" href="#">EVENT</a>
-	</div>
-	<div class="post-data-2">
-		<a class="post-title" href="/TeamPostype/3jo/page3.html">오리지널 작품 구매/후원하고, 500 포인트 받아가세요! 💰</a><br>
-		<a class="post-info" href="/TeamPostype/3jo/page3.html">포스타입 작가 ❤️ 독자 감사 이벤트(2)의 일환으로 진행됩니다.| 오리지널 채널을 구독🎯해주세요!</a><br>
-		<div class="post-tags">
-			<a href="#">포스타입</a>
-		</div>
-		<div class="post-tags">
-			<a href="#">이벤트</a>
-		</div>
-		<div class="post-tags">
-			<a href="#">웹툰</a>
-		</div>
-		<div class="post-tags">
-			<a href="#">웹소설</a>
-		</div>
-		<div class="post-tags">
-			<a href="#">오디오</a>
-		</div>
-	</div>
-	<div class="post-data-3">
-		<div class="post-image">
-			<a href="#">
-				<img id="image" alt="post-image" src="/TeamPostype/2zo/image/gray.png">
-			</a>
-		</div>
-	</div>
-	<br>
-	<div class="post-data-4">
-		<div class="profile">
-			<a href="#">
-				<img id="profile-image" alt="profile-image" src="/TeamPostype/1zo/image/pavicon.png">
-			</a>
-		</div>
-		<div class="profile">
-			<div class="user">
-				<a href="#">포스타입</a>
-			</div>
-			
-		</div>
-	</div>
-</div>
-
-<div class="component-post-divider"></div>	
-
-<div class="post-list">
-	<div class="post-data-1">
-		<a class="series" href="#">EVENT</a>
-	</div>
-	<div class="post-data-2">
-		<a class="post-title" href="/TeamPostype/3jo/page3.html">[종료]오리지널 작품에 댓글 달고, 포인트 받아가세요!💌</a><br>
-		<a class="post-info" href="/TeamPostype/3jo/page3.html">포스타입 작가❤️ 독자 감사 이벤트(1)의 일환으로 진행됩니다. | 오리지널 채널을 구독💘해주세요!</a><br>
-		<div class="post-tags">
-			<a href="#">프로모션</a>
-		</div>
-		<div class="post-tags">
-			<a href="#">웹툰</a>
-		</div>
-		<div class="post-tags">
-			<a href="#">웹소설</a>
-		</div>
-		<div class="post-tags">
-			<a href="#">이벤트</a>
-		</div>
-	</div>
-	<div class="post-data-3">
-		<div class="post-image">
-			<a href="#">
-				<img id="image" alt="post-image" src="/TeamPostype/2zo/image/gray.png">
-			</a>
-		</div>
-	</div>
-	<br>
-	<div class="post-data-4">
-		<div class="profile">
-			<a href="#">
-				<img id="profile-image" alt="profile-image" src="/TeamPostype/1zo/image/pavicon.png">
-			</a>
-		</div>
-		<div class="profile">
-			<div class="user">
-				<a href="#">포스타입</a>
-			</div>
-			
-		</div>
-	</div>
-</div>
-
-	<div class="component-post-divider" style="margin-bottom: 200px"></div>	
-
+	
+	
 <!--FOOTER -->
 
 <footer class="footer">
@@ -714,10 +760,7 @@ ul li{
 		<span class="guide">포스타입은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 포스타입은 콘텐츠, 거래정보 및 거래에 대하여 책임을 지지 않습니다.</span>
 	</div>	
 </footer>
-
-
-
-
+	
 <br><br><br>
 </body>
 </html>
